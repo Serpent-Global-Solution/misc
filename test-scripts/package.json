@@ -1,0 +1,22 @@
+{
+  "name": "meikigo-e2e-tests",
+  "version": "1.0.0",
+  "description": "End-to-end tests for Meikigo customer app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:book-cut": "node customer-app-book-cut.mjs",
+    "test:book-cut:headed": "node customer-app-book-cut.mjs --headless=false",
+    "install-playwright": "npm install -D playwright"
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0"
+  },
+  "keywords": [
+    "e2e",
+    "test",
+    "playwright",
+    "meikigo",
+    "automation"
+  ]
+}
