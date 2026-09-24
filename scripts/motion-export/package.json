@@ -1,0 +1,15 @@
+{
+  "name": "motion-export",
+  "version": "1.0.0",
+  "description": "Automatically captures screenshots of all key pages across meikigo projects for use in motion design/marketing materials.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node capture-screens.mjs",
+    "capture": "node capture-screens.mjs"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
