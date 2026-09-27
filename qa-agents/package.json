@@ -1,0 +1,17 @@
+{
+  "name": "qa-agents",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@mobilenext/mobile-mcp": "^1.0.5",
+    "@playwright/mcp": "^0.0.82",
+    "playwright": "^1.63.0"
+  }
+}

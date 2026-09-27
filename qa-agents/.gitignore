@@ -1,0 +1,5 @@
+node_modules/
+runs/
+config/secrets.env
+tools/
+test-credential/
