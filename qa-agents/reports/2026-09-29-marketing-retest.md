@@ -13,6 +13,7 @@ This retest covered the Meikigo marketing website and the first step of the Merc
 
 ### BUG-001: Plan limits on the pricing cards contradict the plan descriptions
 - **ID:** BUG-001
+- **Fix:** FIXED on 2026-09-29, not committed. The limits were checked against the API seed (`PlanCapsConfiguration.cs`). Starter 4/5/2/1, Plus 8/8/4/3 and Pro 20/15/unlimited/9 (outlets/barbers/logins/staff) **already match** the cards and `llms-full.txt`, so the fault was in the wording. In `data.ts`, Pro's tagline "For multi-outlet operations." is now "For chains run from HQ." (Pro adds 20 outlets and the HQ dashboard). Each tier lists its own products/services cap from the API: Starter "3 products & 5 services", Plus "10 products & 10 services" (unchanged), Pro "30 products & 30 services". Verified on the rendered `/barbershop#pricing`, and "multi-outlet" no longer appears anywhere on the site.
 - **Severity:** Medium (the user is misled about which plan they need and what it costs)
 - **Status:** CONFIRMED (reproduced: I saw the same text)
 - **App:** Marketing website
