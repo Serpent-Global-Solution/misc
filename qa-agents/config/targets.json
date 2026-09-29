@@ -30,5 +30,10 @@
     "platform": "android",
     "device": "emulator-5554",
     "appId": "com.meikigo.pos"
+  },
+  "marketing": {
+    "name": "Meikigo website",
+    "url": "http://meiki-marketing-site.test:3002",
+    "viewport": "1440x900"
   }
 }

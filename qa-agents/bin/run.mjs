@@ -121,7 +121,9 @@ async function runPersona(p) {
     .replace(/Do not guess URLs;[^\n]*/, 'Move around by tapping what you see.')
     .replace('Do not open developer tools, read page source or run JavaScript.', 'Do not look at logs or developer settings.')
     .replace(/- Stay on the Meikigo sites[^\n]*/, '- Stay inside the Meikigo app. Do not open other apps.');
-  const prompt = `${p.body}\n\n${taskLines.join('\n\n')}\n\nBegin now.`;
+  // {{RUN_TAG}} gives sign-up personas an email no earlier run has registered.
+  const runTag = new Date().toISOString().slice(5, 16).replace(/\D/g, ''); // MMDDHHMM
+  const prompt = `${p.body.replaceAll('{{RUN_TAG}}', runTag)}\n\n${taskLines.join('\n\n')}\n\nBegin now.`;
   fs.writeFileSync(path.join(dir, 'prompt.md'), `# System\n\n${system}\n\n# Task\n\n${prompt.replace(/(login details: )[^\n]*/i, '$1<redacted>')}\n`);
 
   const cliArgs = [

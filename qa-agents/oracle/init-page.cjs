@@ -112,13 +112,26 @@ module.exports.default = async ({ page }) => {
     const key = routeKey(page.url());
     if (lite() || !axeSource || axeDone.has(key) || !/^https?:/.test(page.url())) return;
     axeDone.add(key);
+    // Scanning at load caught text mid fade-in (reveal animations) and reported false
+    // contrast failures. Wait for animations, scan twice, keep only nodes failing both times.
+    const scan = () => page.evaluate(async () => {
+      const r = await window.axe.run(document, { resultTypes: ['violations'] });
+      return r.violations.filter(v => v.impact === 'critical' || v.impact === 'serious')
+        .map(v => ({ id: v.id, impact: v.impact, help: v.help, targets: v.nodes.map(n => n.target.join(' ')) }));
+    });
     try {
+      await page.waitForTimeout(2500);
+      if (page.isClosed() || routeKey(page.url()) !== key) return;
       await page.evaluate(axeSource);
-      const res = await page.evaluate(async () => {
-        const r = await window.axe.run(document, { resultTypes: ['violations'] });
-        return r.violations.filter(v => v.impact === 'critical' || v.impact === 'serious')
-          .map(v => ({ id: v.id, impact: v.impact, help: v.help, nodes: v.nodes.length, sample: v.nodes[0]?.target?.join(' ') }));
-      });
+      const first = await scan();
+      if (!first.length) return;
+      await page.waitForTimeout(1500);
+      if (page.isClosed() || routeKey(page.url()) !== key) return;
+      const again = new Set((await scan()).flatMap(v => v.targets.map(t => v.id + '|' + t)));
+      const res = first
+        .map(v => ({ ...v, targets: v.targets.filter(t => again.has(v.id + '|' + t)) }))
+        .filter(v => v.targets.length)
+        .map(({ targets, ...v }) => ({ ...v, nodes: targets.length, sample: targets[0] }));
       if (res.length) write('a11y', { url: page.url(), route: key, violations: res });
     } catch {}
   });

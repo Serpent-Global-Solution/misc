@@ -50,7 +50,7 @@ node bin/run.mjs --personas merchant --browser firefox --run runs/<name>        
 node bin/triage.mjs --run runs/<name>
 ```
 
-- `--personas` takes `all`, an app name (`admin`, `merchant`, `customer`, `pos-web`, `pos-ios`), a folder name or persona ids separated by commas.
+- `--personas` takes `all`, an app name (`admin`, `merchant`, `customer`, `marketing`, `pos-web`, `pos-ios`), a folder name or persona ids separated by commas.
 - `--dry-run` writes the configs and prints the commands without starting agents.
 - Each persona folder in a run holds `prompt.md`, `transcript.jsonl`, `diary.md`, `oracle.jsonl`, `evidence/`, `artifacts/` and `meta.json` (outcome, actions, minutes, cost).
 

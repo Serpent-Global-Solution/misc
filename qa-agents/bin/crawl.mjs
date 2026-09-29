@@ -13,7 +13,7 @@ import { ROOT, parseArgs, loadTargets, stamp } from './lib.mjs';
 
 const args = parseArgs(process.argv.slice(2));
 const targets = loadTargets();
-const apps = String(args.apps || 'admin,merchant,customer,pos-web').split(',');
+const apps = String(args.apps || 'marketing,admin,merchant,customer,pos-web').split(',');
 const max = Number(args.max || 40);
 const runRoot = path.resolve(ROOT, args.run || path.join('runs', stamp()));
 const LOGIN = { admin: ['ADMIN_EMAIL', 'ADMIN_PASSWORD'], merchant: ['OWNER_EMAIL', 'OWNER_PASSWORD'], customer: ['CUSTOMER_EMAIL', 'CUSTOMER_PASSWORD'], 'pos-web': ['POS_EMAIL', 'POS_PASSWORD'] };
