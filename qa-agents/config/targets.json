@@ -11,7 +11,7 @@
   },
   "customer": {
     "name": "Meikigo customer web app",
-    "url": "http://meiki-customer-webapp.test:3001/o/BRAND_ID/OUTLET_ID",
+    "url": "http://meiki-customer-webapp.test:3001/o/383f619d-f41d-4bfb-bed3-f301c41fb85c/02d11c38-b4f8-4419-9977-c5038453c09e",
     "device": "iPhone 15"
   },
   "pos-web": {
