@@ -1,0 +1,17 @@
+node_modules/
+.DS_Store
+.idea/
+.cursor/
+.playwright-mcp/
+.env-backup/
+realm-export*.json
+meikigo-admin/
+meikigo-api/
+meikigo-brand/
+meikigo-customer-webapp/
+meikigo-doc/
+meikigo-keycloak/
+meikigo-marketing-site/
+meikigo-pos-native/
+ponytail/
+maybank/

@@ -1,0 +1,85 @@
+{
+  "schema": "webanatomy.score.v1",
+  "overall": 62,
+  "band": [
+    58,
+    66
+  ],
+  "coverage": 0.98,
+  "evidenceBacked": 0.58,
+  "evaluated": 48,
+  "naCount": 1,
+  "categoryScores": [
+    {
+      "category": "Hero",
+      "score": 59,
+      "passCount": 4,
+      "failCount": 3,
+      "naCount": 0,
+      "failedItemIds": [
+        "hero.numeric_proof",
+        "hero.differentiation",
+        "hero.product_visual"
+      ]
+    },
+    {
+      "category": "Value Proposition",
+      "score": 69,
+      "passCount": 5,
+      "failCount": 2,
+      "naCount": 0,
+      "failedItemIds": [
+        "value_prop.specific_promise",
+        "value_prop.problem_clarity"
+      ]
+    },
+    {
+      "category": "Copywriting",
+      "score": 89,
+      "passCount": 8,
+      "failCount": 1,
+      "naCount": 0,
+      "failedItemIds": [
+        "copy.plain_language"
+      ]
+    },
+    {
+      "category": "Trust & Credibility",
+      "score": 43,
+      "passCount": 4,
+      "failCount": 5,
+      "naCount": 0,
+      "failedItemIds": [
+        "trust.quantified_proof",
+        "trust.customer_logos",
+        "trust.content_quality",
+        "trust.trust_badges",
+        "trust.linked_proof"
+      ]
+    },
+    {
+      "category": "Conversion",
+      "score": 43,
+      "passCount": 2,
+      "failCount": 3,
+      "naCount": 1,
+      "failedItemIds": [
+        "conversion.cta_dominance",
+        "conversion.low_commitment_cta",
+        "conversion.post_submit_clarity"
+      ]
+    },
+    {
+      "category": "Design & UX",
+      "score": 73,
+      "passCount": 8,
+      "failCount": 3,
+      "naCount": 0,
+      "failedItemIds": [
+        "design.color_contrast",
+        "design.nav_structure",
+        "design.footer"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Barbershop hero and proof - benchmark examples</title>
+<style>
+:root{--ink:#1f2328;--mut:#57606a;--line:#d0d7de;--soft:#eef4fb;--accent:#0969da;--high:#b91c1c;--med:#b45309;--low:#15803d}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font:16px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Inter,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:48px 24px 96px}
+header{padding-bottom:20px;margin-bottom:20px;border-bottom:2px solid var(--ink)}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);font-weight:700}
+h1{font-size:clamp(28px,4vw,38px);line-height:1.15;margin:6px 0;letter-spacing:-.01em}
+h2{font-size:21px;margin:52px 0 16px}
+h3{font-size:18px;margin:0;flex:1;min-width:200px}
+p{margin:0 0 12px}a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+ul,ol{margin:0 0 12px;padding-left:22px}li{margin-bottom:5px}
+.meta{color:var(--mut);font-size:14px}
+.tldr{background:var(--soft);border-left:4px solid var(--accent);border-radius:4px;padding:18px 22px;margin:28px 0}
+.tldr p{margin:0}.tldr ul{margin:10px 0 0;padding-left:20px}.tldr li{margin-bottom:6px}
+.prompt pre{white-space:pre-wrap;word-break:break-word;background:#fff;border:1px solid var(--line);border-radius:6px;padding:12px 13px;margin:0;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink)}
+.copy-btn{font:600 12px/1 inherit;cursor:pointer;border:1px solid var(--accent);color:var(--accent);background:#fff;border-radius:6px;padding:5px 11px}
+.copy-btn:hover{background:var(--accent);color:#fff}
+.rec{border-top:1px solid var(--line);padding:24px 0 28px}
+.rec-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.num{flex:none;width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;background:#111;color:#fff;font-weight:700;font-size:14px;border-radius:6px}
+.ribbon{display:inline-block;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:#111;color:#fff}
+.why{color:var(--mut);margin-bottom:10px}
+.how{margin-bottom:14px}
+.gap{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:700}
+.gap.high{background:#fee2e2;color:var(--high)}.gap.medium{background:#fef3c7;color:var(--med)}.gap.low{background:#dcfce7;color:var(--low)}
+.kind{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:700;background:#e0e7ff;color:#3730a3;text-transform:capitalize}
+.inspired{margin:14px 0}
+.inspired-label{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-bottom:8px}
+.refstrip{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.refstrip.gallery{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.refcard{margin:0;position:relative;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 1px 4px rgba(31,35,40,.06)}
+.refcard .opt{position:absolute;top:8px;left:8px;z-index:2;width:24px;height:24px;display:flex;align-items:center;justify-content:center;background:#111;color:#fff;font-weight:700;font-size:12px;border-radius:6px}
+.refcard .shot{display:block}
+.refcard img{display:block;width:100%;height:150px;object-fit:cover;object-position:top center;cursor:zoom-in}
+.refcard .noimg{height:150px;display:flex;align-items:center;justify-content:center;background:#f6f8fa;color:var(--mut);font-size:13px;padding:12px;text-align:center}
+.refcard figcaption{padding:8px 10px;font-size:12.5px;line-height:1.45;color:var(--mut)}
+.refcard figcaption strong{color:var(--ink);display:inline-block;margin-right:4px}
+.refcard figcaption span{display:block;margin-top:3px}
+.refcard .src{font-size:11px}
+.prompt{margin-top:12px;border:1px solid var(--line);border-radius:8px;background:#fafbfc}
+.prompt summary{cursor:pointer;padding:8px 12px;font-size:13px;font-weight:600;color:var(--accent)}
+.prompt-body{position:relative;padding:0 12px 12px}
+.prompt-body .copy-btn{position:absolute;top:8px;right:20px}
+.working{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:14px 16px 14px 34px;margin:0 0 12px}
+table{width:100%;border-collapse:collapse;margin:12px 0 24px;font-size:14px}
+th,td{border-bottom:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#f6f8fa;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+.snapshot{margin-top:40px;border:1px solid var(--line);border-radius:8px;padding:4px 14px;color:var(--mut)}
+.snapshot summary{cursor:pointer;padding:8px 0;font-weight:600;color:var(--ink)}
+.snapshot ul{padding:4px 0 10px 22px}
+#lightbox{position:fixed;inset:0;display:none;background:rgba(31,35,40,.92);z-index:50;cursor:zoom-out;padding:32px}
+#lightbox.open{display:flex;align-items:center;justify-content:center}
+#lightbox img{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px}
+.footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);color:var(--mut);font-size:13px}
+</style></head><body><div class="wrap">
+<header><div class="eyebrow">Find examples · compare mode</div><h1>Barbershop hero and proof - benchmark examples</h1><div class="meta">Meikigo /barbershop hero and proof against Fresha, Square, Toast, Booksy, Squire and StoreHub homepages, captured live on 2026-09-28.</div></header>
+<div class="tldr"><p><strong>TL;DR:</strong> The hero trails the market: every peer shows product or proof in the fold, Meikigo shows only a barber photo.</p><ul><li>Strong pages put a verifiable number or rating next to the headline and name the audience in the H1 or sub.</li><li>Peers pair the main CTA with a softer path: an overview video, or WhatsApp chat in Malaysia (StoreHub).</li></ul></div>
+<h2>Patterns</h2><section class="rec lead">
+<div class="rec-head"><span class="num">1</span><h3>The product owns the fold</h3><span class="ribbon">Start here</span></div>
+<p class="why">A cold visitor knows it is software in one glance. Fresha, Squire and StoreHub fill half the hero with real screens, not a lifestyle photo.</p>
+<ul class="how"><li>Put the tablet queue board and the phone booking #42 screen in the hero, framed as devices.</li><li>Keep a barbershop photo only as background context behind the devices, not instead of them.</li><li>Reuse the screens already built for the three-screens section so no new design work is needed.</li></ul><div class="inspired"><div class="inspired-label">Inspired by</div><div class="refstrip"><figure class="refcard"><span class="opt">A</span><a class="shot" href="references/fresha-hero.png"><img src="references/fresha-hero.png" alt="Calendar UI fills the fold under two CTAs" loading="lazy" /></a><figcaption><strong>Fresha</strong> <a class="src" href="https://www.fresha.com/for-business">fresha.com</a><span>Real desktop and phone calendar dominate the fold. Watch an overview sits beside Get started as the soft path.</span></figcaption></figure><figure class="refcard"><span class="opt">B</span><a class="shot" href="references/squire-hero.png"><img src="references/squire-hero.png" alt="Three phone screens under a barber-only claim" loading="lazy" /></a><figcaption><strong>SQUIRE</strong> <a class="src" href="https://getsquire.com/">getsquire.com</a><span>Sub says the only POS built for barbers, solo or whole crew. Booking, barber and reports screens show every side.</span></figcaption></figure><figure class="refcard"><span class="opt">C</span><a class="shot" href="references/storehub-hero.png"><img src="references/storehub-hero.png" alt="Rating above H1, devices left, WhatsApp as second CTA" loading="lazy" /></a><figcaption><strong>StoreHub</strong> <a class="src" href="https://www.storehub.com/my/">storehub.com</a><span>Local peer. 4.7/5 from 2,200+ Google reviews sits above the H1, and Chat on WhatsApp is the secondary action.</span></figcaption></figure></div></div>
+</section>
+<section class="rec">
+<div class="rec-head"><span class="num">2</span><h3>A checkable number sits next to the headline</h3></div>
+<p class="why">StoreHub puts a Google rating above its H1, Toast names 180,000 locations in the sub. The proof lands before the visitor reads the pitch.</p>
+<ul class="how"><li>Do not invent a count. Collect Google Business Profile reviews first, then show the real rating above the H1.</li><li>Until then, use a factual line such as the RM109 price floor or supported payment rails as the proof slot.</li></ul><div class="inspired"><div class="inspired-label">Inspired by</div><div class="refstrip"><figure class="refcard"><span class="opt">A</span><a class="shot" href="references/storehub-hero.png"><img src="references/storehub-hero.png" alt="Rating above H1, devices left, WhatsApp as second CTA" loading="lazy" /></a><figcaption><strong>StoreHub</strong> <a class="src" href="https://www.storehub.com/my/">storehub.com</a><span>Local peer. 4.7/5 from 2,200+ Google reviews sits above the H1, and Chat on WhatsApp is the secondary action.</span></figcaption></figure><figure class="refcard"><span class="opt">B</span><a class="shot" href="references/toast-hero.png"><img src="references/toast-hero.png" alt="Customer count in the sub, logo strip under the fold" loading="lazy" /></a><figcaption><strong>Toast</strong> <a class="src" href="https://pos.toasttab.com/">pos.toasttab.com</a><span>Trusted by 180,000 locations sits inside the sub. A video pill above the H1 offers the low-commitment path.</span></figcaption></figure></div></div>
+</section>
+<section class="rec">
+<div class="rec-head"><span class="num">3</span><h3>The H1 or sub names who it is for and why it differs</h3></div>
+<p class="why">Booksy names barbers, stylists and salon owners. Squire says the only POS built for barbers, solo or whole crew. Readers self-select in seconds.</p>
+<ul class="how"><li>Name barbershops and unisex salons, from one chair to multi-outlet, in the sub.</li><li>State the difference from booking apps in one line: booking, queue, payment and report on one tablet.</li></ul><div class="inspired"><div class="inspired-label">Inspired by</div><div class="refstrip"><figure class="refcard"><span class="opt">A</span><a class="shot" href="references/booksy-hero.png"><img src="references/booksy-hero.png" alt="H1 names barbers, stylists and salon owners" loading="lazy" /></a><figcaption><strong>Booksy</strong> <a class="src" href="https://biz.booksy.com/en-us/">biz.booksy.com</a><span>The H1 is the audience. The sub adds every feature on every plan and 330,000+ pros, then one CTA.</span></figcaption></figure><figure class="refcard"><span class="opt">B</span><a class="shot" href="references/squire-hero.png"><img src="references/squire-hero.png" alt="Three phone screens under a barber-only claim" loading="lazy" /></a><figcaption><strong>SQUIRE</strong> <a class="src" href="https://getsquire.com/">getsquire.com</a><span>Sub says the only POS built for barbers, solo or whole crew. Booking, barber and reports screens show every side.</span></figcaption></figure></div></div>
+</section>
+<section class="rec">
+<div class="rec-head"><span class="num">4</span><h3>A softer second action beside the main CTA</h3></div>
+<p class="why">Fresha pairs Get started with Watch an overview. StoreHub pairs its demo with Chat on WhatsApp, the channel Malaysian owners already use.</p>
+<ul class="how"><li>Add a Chat on WhatsApp button next to Start free, styled as secondary.</li><li>Or add a 60-second queue walkthrough video as the secondary action.</li></ul><div class="inspired"><div class="inspired-label">Inspired by</div><div class="refstrip"><figure class="refcard"><span class="opt">A</span><a class="shot" href="references/fresha-hero.png"><img src="references/fresha-hero.png" alt="Calendar UI fills the fold under two CTAs" loading="lazy" /></a><figcaption><strong>Fresha</strong> <a class="src" href="https://www.fresha.com/for-business">fresha.com</a><span>Real desktop and phone calendar dominate the fold. Watch an overview sits beside Get started as the soft path.</span></figcaption></figure><figure class="refcard"><span class="opt">B</span><a class="shot" href="references/storehub-hero.png"><img src="references/storehub-hero.png" alt="Rating above H1, devices left, WhatsApp as second CTA" loading="lazy" /></a><figcaption><strong>StoreHub</strong> <a class="src" href="https://www.storehub.com/my/">storehub.com</a><span>Local peer. 4.7/5 from 2,200+ Google reviews sits above the H1, and Chat on WhatsApp is the secondary action.</span></figcaption></figure></div></div>
+</section>
+<section class="rec">
+<div class="rec-head"><span class="num">5</span><h3>Testimonials a visitor can verify</h3></div>
+<p class="why">Booksy shows video quotes with a real name, social handle and a link to the pro&#39;s live booking profile, then review-site ratings below.</p>
+<ul class="how"><li>Replace the current quotes only with real pilot shops that agree to be named, with a photo or short clip.</li><li>Link each quote to the shop&#39;s live Meikigo booking page or Google profile.</li><li>Until pilots sign off, drop the section rather than show unverified names.</li></ul><div class="inspired"><div class="inspired-label">Inspired by</div><div class="refstrip"><figure class="refcard"><a class="shot" href="references/booksy-proof.png"><img src="references/booksy-proof.png" alt="Video quotes with handles and profile links, ratings below" loading="lazy" /></a><figcaption><strong>Booksy</strong> <a class="src" href="https://biz.booksy.com/en-us/">biz.booksy.com</a><span>Each quote has a name, social handle and a link to the pro&#39;s live profile. Review-site ratings follow directly.</span></figcaption></figure></div></div>
+</section>
+<h2>What&#39;s working (keep these)</h2><ul class="working"><li>One CTA label, Start free, with no card and no contract right under it. Stronger risk reduction than Square or Toast.</li><li>Transparent RM pricing on the page. Toast and Square push demos or sales contact first.</li><li>An honest compare against typical booking apps, a move only Toast makes among these peers.</li></ul>
+<h2>Gap analysis</h2><table><thead><tr><th>Dimension</th><th>Current</th><th>Strong pattern</th><th>Gap</th></tr></thead><tbody><tr><td>Product visual</td><td>Barber photo only, no UI in the fold</td><td>Real product screens fill half the hero</td><td><span class="gap high">HIGH</span></td></tr>
+<tr><td>Testimonial credibility</td><td>First-name quotes, unverified shop names, pilot note visible</td><td>Named pros with handle, video and link to live profile</td><td><span class="gap high">HIGH</span></td></tr>
+<tr><td>Proof next to headline</td><td>Capability ticker, no number or rating</td><td>Rating or customer count above or inside the H1 block</td><td><span class="gap medium">MEDIUM</span></td></tr>
+<tr><td>Audience and difference</td><td>Manifesto H1, audience implied by a pill</td><td>H1 or sub names who it is for and the one difference</td><td><span class="gap medium">MEDIUM</span></td></tr>
+<tr><td>Secondary action</td><td>Start free is the only path</td><td>Overview video or WhatsApp chat beside the main CTA</td><td><span class="gap medium">MEDIUM</span></td></tr>
+<tr><td>Hero readability</td><td>White sub and trial line on light beige photo</td><td>Dark text on light ground or light text on a dark overlay</td><td><span class="gap low">LOW</span></td></tr></tbody></table>
+<h2>All references</h2><div class="refstrip gallery"><figure class="refcard"><a class="shot" href="references/current.png"><img src="references/current.png" alt="Current state, desktop 1440x900" loading="lazy" /></a><figcaption><strong>Meikigo</strong> <a class="src" href="http://localhost:3002/barbershop">localhost</a><span>Photo-led fold with no product, no number, and a low-contrast trial line.</span></figcaption></figure><figure class="refcard"><a class="shot" href="references/square-hero.png"><img src="references/square-hero.png" alt="Short outcome H1, device in real use below" loading="lazy" /></a><figcaption><strong>Square</strong> <a class="src" href="https://squareup.com/us/en/appointments">squareup.com</a><span>Plain outcome H1 and a real counter tablet in use. Two CTAs compete at similar weight, a move to avoid.</span></figcaption></figure></div>
+<details class="snapshot"><summary>Current reality (context)</summary><ul><li><strong>Headline.</strong> This is how a barbershop should run.</li>
+<li><strong>Subheadline.</strong> Scan to book. No app. One tablet for queue, pay, and reports.</li>
+<li><strong>CTA.</strong> Start free, with 14-day Plus-equivalent trial · No card · No contract below</li>
+<li><strong>Hero visual.</strong> Barber and client photo on beige backdrop</li>
+<li><strong>Proof.</strong> Capability ticker; two first-name quotes further down</li></ul></details>
+<div class="footer">Live captures of public pages on 2026-09-28, desktop 1440x900. No Web Anatomy benchmark data: the MCP was not connected.</div>
+</div>
+<div id="lightbox"><img alt="" /></div>
+<script>
+function fallbackCopy(text, done) {
+  const area = document.createElement("textarea");
+  area.value = text;
+  document.body.appendChild(area);
+  area.select();
+  try { document.execCommand("copy"); } catch {}
+  area.remove();
+  done();
+}
+document.addEventListener("click", (event) => {
+  const btn = event.target.closest(".copy-btn");
+  if (btn) {
+    const text = btn.closest(".copyable").querySelector("pre").innerText;
+    const done = () => { btn.textContent = "Copied"; setTimeout(() => { btn.textContent = "Copy"; }, 1500); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+    } else {
+      fallbackCopy(text, done);
+    }
+    return;
+  }
+  const shotLink = event.target.closest("a.shot");
+  if (shotLink) {
+    const img = shotLink.querySelector("img");
+    if (!img) return;
+    event.preventDefault();
+    const overlay = document.getElementById("lightbox");
+    overlay.querySelector("img").src = img.src;
+    overlay.classList.add("open");
+    return;
+  }
+  const overlay = event.target.closest("#lightbox");
+  if (overlay) overlay.classList.remove("open");
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") document.getElementById("lightbox").classList.remove("open");
+});
+</script>
+</body></html>

@@ -1,0 +1,131 @@
+# Meikigo backend stack for the OCI Ampere A1 (Arm64) VM.
+#
+#   Caddy (80/443, public)  ->  meikigo-api:8081
+#                           ->  meikigo-keycloak:8080
+#
+# Postgres is NOT a container in this stack (errata 2026-08-22, see
+# ../deployment-doc.md §3.2). Both databases (meikigo, meikigo-keycloak) live
+# on OCI's managed PostgreSQL-compatible database service, reached by
+# api/keycloak over TLS at MANAGED_DB_HOST:MANAGED_DB_PORT — not the
+# meikigo-network bridge. Provisioning that instance (30-day retention, PITR
+# enabled, network access narrowed to this VM) is a one-time human task —
+# see ../deployment/backup-restore-runbook.md before the first `up`.
+#
+# Frontends (admin / customer / merchant / marketing) are on Netlify and are
+# NOT part of this stack. The mobile app talks to https://<API_DOMAIN> directly.
+#
+# Config/secrets come from a .env file in THIS folder — copy .env.example to
+# .env and fill it in. Run from here:  docker compose up -d --build
+#
+# Arm64 note: build on the VM itself (native arm64). All base images below are
+# multi-arch, so they pull the arm64 variant automatically.
+
+networks:
+  meikigo-network:
+    driver: bridge
+
+volumes:
+  caddy_data:     # ACME certs / Let's Encrypt state — must persist
+  caddy_config:
+
+services:
+  caddy:
+    image: caddy:2-alpine
+    container_name: meikigo-caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"   # HTTP/3
+    environment:
+      API_DOMAIN: ${API_DOMAIN}
+      AUTH_DOMAIN: ${AUTH_DOMAIN}
+      ACME_EMAIL: ${ACME_EMAIL}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - api
+      - keycloak
+    networks:
+      - meikigo-network
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.0.7
+    container_name: meikigo-keycloak
+    restart: unless-stopped
+    command: start
+    environment:
+      KC_DB: postgres
+      # Managed instance, not a container on meikigo-network — see the file header
+      # and deployment-doc.md §3.2. sslmode=require: the managed service expects TLS.
+      KC_DB_URL: jdbc:postgresql://${MANAGED_DB_HOST}:${MANAGED_DB_PORT}/meikigo-keycloak?sslmode=require
+      KC_DB_USERNAME: ${MANAGED_DB_ADMIN_USERNAME}
+      KC_DB_PASSWORD: ${MANAGED_DB_ADMIN_PASSWORD}
+      # Production mode behind Caddy: Caddy terminates TLS and forwards HTTP.
+      KC_HOSTNAME: https://${AUTH_DOMAIN}
+      KC_HTTP_ENABLED: "true"
+      KC_PROXY_HEADERS: xforwarded
+      KC_HEALTH_ENABLED: "true"
+      KC_BOOTSTRAP_ADMIN_USERNAME: ${KC_BOOTSTRAP_ADMIN_USERNAME}
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${KC_BOOTSTRAP_ADMIN_PASSWORD}
+    # No public `ports:` — only Caddy reaches it, at meikigo-keycloak:8080.
+    networks:
+      - meikigo-network
+
+  api:
+    build:
+      context: ../meikigo-api
+      dockerfile: Dockerfile
+    image: meikigo-api:latest
+    container_name: meikigo-api
+    restart: unless-stopped
+    environment:
+      # meikigo-api is .NET 10/ASP.NET Core, not the Java/Spring Boot stack this file
+      # originally assumed (tech-stack-x-infra.md fixed the stack after this compose
+      # file was first drafted) — env var names below are the .NET-idiomatic
+      # equivalents of the old SERVER_PORT/DB_URL+DB_USERNAME+DB_PASSWORD/JPA_DDL_AUTO
+      # set. See meikigo-api/API-CONTRACTS.md and deployment-doc.md §4/§6 for detail.
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:8081
+      # .NET/Npgsql connection string, pointed at the managed instance's endpoint over
+      # TLS — not a `postgres` container on this network (see file header, deployment-doc.md §3.2).
+      ConnectionStrings__Meikigo: Host=${MANAGED_DB_HOST};Port=${MANAGED_DB_PORT};Database=${MANAGED_DB_NAME};Username=${MANAGED_DB_ADMIN_USERNAME};Password=${MANAGED_DB_ADMIN_PASSWORD};SSL Mode=Require;Trust Server Certificate=true
+      # Applies any pending EF Core migration at container startup — the .NET
+      # equivalent of the old JPA_DDL_AUTO=update (Hibernate's live schema-diffing
+      # has no direct EF Core analogue; see meikigo-api/src/Meikigo.Api/Program.cs).
+      DB_AUTO_MIGRATE: ${DB_AUTO_MIGRATE:-true}
+      # Admin-client calls go container-to-container over the internal network:
+      Keycloak__ServerUrl: http://keycloak:8080
+      Keycloak__Realm: meikigo
+      Keycloak__AdminClientId: meikigo-api
+      Keycloak__AdminClientSecret: ${KEYCLOAK_ADMIN_CLIENT_SECRET}
+      Keycloak__DefaultMerchantRole: merchant-admin
+      # Issuer is the PUBLIC auth URL — must match what the frontends log in against.
+      Jwt__Authority: https://${AUTH_DOMAIN}/realms/meikigo
+      Jwt__Audience: account
+      Cors__AllowedOrigins: ${CORS_ALLOWED_ORIGINS}
+      # Phase 3 — per-Brand HitPay API keys/webhook salts are encrypted DB rows, not env
+      # vars (requirements.md § HITPAY_* Environment Variables). This is the AES-256-GCM
+      # key used to encrypt/decrypt those rows — generate with `openssl rand -base64 32`
+      # and never rotate it without a re-encryption migration for existing rows.
+      Encryption__CredentialKey: ${ENCRYPTION_CREDENTIAL_KEY}
+      # Payments:Provider must stay HitPay in this file — Program.cs refuses to start
+      # with Provider=Mock while ASPNETCORE_ENVIRONMENT=Production, since a simulated
+      # gateway in production would report successful payments while no money moves.
+      Payments__Provider: HitPay
+      # Meikigo's own master HitPay account (subscriptions + platform commission) —
+      # the only HitPay credentials that are ever env vars; every Brand's own connected
+      # account credentials are the encrypted DB rows above.
+      HitPay__Environment: ${HITPAY_ENVIRONMENT:-Live}
+      HitPay__PlatformApiKey: ${HITPAY_PLATFORM_API_KEY}
+      HitPay__PlatformKey: ${HITPAY_PLATFORM_KEY}
+      HitPay__PlatformWebhookSalt: ${HITPAY_PLATFORM_WEBHOOK_SALT}
+      HitPay__WebhookPublicUrl: https://${API_DOMAIN}/api/v1/webhooks/hitpay
+    # No public `ports:` — only Caddy reaches it, at meikigo-api:8081.
+    depends_on:
+      keycloak:
+        condition: service_started
+    networks:
+      - meikigo-network

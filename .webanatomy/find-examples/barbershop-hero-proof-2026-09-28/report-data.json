@@ -1,0 +1,93 @@
+{
+  "title": "Barbershop hero and proof - benchmark examples",
+  "eyebrow": "Find examples · compare mode",
+  "subtitle": "Meikigo /barbershop hero and proof against Fresha, Square, Toast, Booksy, Squire and StoreHub homepages, captured live on 2026-09-28.",
+  "target": "meikigo-marketing-site /barbershop",
+  "ungrounded": true,
+  "summary": [
+    "The hero trails the market: every peer shows product or proof in the fold, Meikigo shows only a barber photo.",
+    "Strong pages put a verifiable number or rating next to the headline and name the audience in the H1 or sub.",
+    "Peers pair the main CTA with a softer path: an overview video, or WhatsApp chat in Malaysia (StoreHub)."
+  ],
+  "recommendationsHeading": "Patterns",
+  "recommendations": [
+    {
+      "title": "The product owns the fold",
+      "why": "A cold visitor knows it is software in one glance. Fresha, Squire and StoreHub fill half the hero with real screens, not a lifestyle photo.",
+      "how": [
+        "Put the tablet queue board and the phone booking #42 screen in the hero, framed as devices.",
+        "Keep a barbershop photo only as background context behind the devices, not instead of them.",
+        "Reuse the screens already built for the three-screens section so no new design work is needed."
+      ],
+      "refIds": ["fresha-hero", "squire-hero", "storehub-hero"]
+    },
+    {
+      "title": "A checkable number sits next to the headline",
+      "why": "StoreHub puts a Google rating above its H1, Toast names 180,000 locations in the sub. The proof lands before the visitor reads the pitch.",
+      "how": [
+        "Do not invent a count. Collect Google Business Profile reviews first, then show the real rating above the H1.",
+        "Until then, use a factual line such as the RM109 price floor or supported payment rails as the proof slot."
+      ],
+      "refIds": ["storehub-hero", "toast-hero"]
+    },
+    {
+      "title": "The H1 or sub names who it is for and why it differs",
+      "why": "Booksy names barbers, stylists and salon owners. Squire says the only POS built for barbers, solo or whole crew. Readers self-select in seconds.",
+      "how": [
+        "Name barbershops and unisex salons, from one chair to multi-outlet, in the sub.",
+        "State the difference from booking apps in one line: booking, queue, payment and report on one tablet."
+      ],
+      "refIds": ["booksy-hero", "squire-hero"]
+    },
+    {
+      "title": "A softer second action beside the main CTA",
+      "why": "Fresha pairs Get started with Watch an overview. StoreHub pairs its demo with Chat on WhatsApp, the channel Malaysian owners already use.",
+      "how": [
+        "Add a Chat on WhatsApp button next to Start free, styled as secondary.",
+        "Or add a 60-second queue walkthrough video as the secondary action."
+      ],
+      "refIds": ["fresha-hero", "storehub-hero"]
+    },
+    {
+      "title": "Testimonials a visitor can verify",
+      "why": "Booksy shows video quotes with a real name, social handle and a link to the pro's live booking profile, then review-site ratings below.",
+      "how": [
+        "Replace the current quotes only with real pilot shops that agree to be named, with a photo or short clip.",
+        "Link each quote to the shop's live Meikigo booking page or Google profile.",
+        "Until pilots sign off, drop the section rather than show unverified names."
+      ],
+      "refIds": ["booksy-proof"]
+    }
+  ],
+  "gapAnalysis": [
+    { "dimension": "Product visual", "current": "Barber photo only, no UI in the fold", "strongPattern": "Real product screens fill half the hero", "gap": "HIGH" },
+    { "dimension": "Testimonial credibility", "current": "First-name quotes, unverified shop names, pilot note visible", "strongPattern": "Named pros with handle, video and link to live profile", "gap": "HIGH" },
+    { "dimension": "Proof next to headline", "current": "Capability ticker, no number or rating", "strongPattern": "Rating or customer count above or inside the H1 block", "gap": "MEDIUM" },
+    { "dimension": "Audience and difference", "current": "Manifesto H1, audience implied by a pill", "strongPattern": "H1 or sub names who it is for and the one difference", "gap": "MEDIUM" },
+    { "dimension": "Secondary action", "current": "Start free is the only path", "strongPattern": "Overview video or WhatsApp chat beside the main CTA", "gap": "MEDIUM" },
+    { "dimension": "Hero readability", "current": "White sub and trial line on light beige photo", "strongPattern": "Dark text on light ground or light text on a dark overlay", "gap": "LOW" }
+  ],
+  "working": [
+    "One CTA label, Start free, with no card and no contract right under it. Stronger risk reduction than Square or Toast.",
+    "Transparent RM pricing on the page. Toast and Square push demos or sales contact first.",
+    "An honest compare against typical booking apps, a move only Toast makes among these peers."
+  ],
+  "currentSnapshot": [
+    { "label": "Headline", "text": "This is how a barbershop should run." },
+    { "label": "Subheadline", "text": "Scan to book. No app. One tablet for queue, pay, and reports." },
+    { "label": "CTA", "text": "Start free, with 14-day Plus-equivalent trial · No card · No contract below" },
+    { "label": "Hero visual", "text": "Barber and client photo on beige backdrop" },
+    { "label": "Proof", "text": "Capability ticker; two first-name quotes further down" }
+  ],
+  "references": [
+    { "id": "current-hero", "title": "Meikigo /barbershop hero (current)", "company": "Meikigo", "section": "hero", "sourceUrl": "http://localhost:3002/barbershop", "screenshotUrl": "http://localhost:3002/barbershop", "localImage": "references/current.png", "caption": "Current state, desktop 1440x900", "insight": "Photo-led fold with no product, no number, and a low-contrast trial line." },
+    { "id": "fresha-hero", "title": "Fresha for business", "company": "Fresha", "section": "hero", "sourceUrl": "https://www.fresha.com/for-business", "screenshotUrl": "https://www.fresha.com/for-business", "localImage": "references/fresha-hero.png", "caption": "Calendar UI fills the fold under two CTAs", "insight": "Real desktop and phone calendar dominate the fold. Watch an overview sits beside Get started as the soft path." },
+    { "id": "squire-hero", "title": "SQUIRE homepage", "company": "SQUIRE", "section": "hero", "sourceUrl": "https://getsquire.com/", "screenshotUrl": "https://getsquire.com/", "localImage": "references/squire-hero.png", "caption": "Three phone screens under a barber-only claim", "insight": "Sub says the only POS built for barbers, solo or whole crew. Booking, barber and reports screens show every side." },
+    { "id": "storehub-hero", "title": "StoreHub Malaysia", "company": "StoreHub", "section": "hero", "sourceUrl": "https://www.storehub.com/my/", "screenshotUrl": "https://www.storehub.com/my/", "localImage": "references/storehub-hero.png", "caption": "Rating above H1, devices left, WhatsApp as second CTA", "insight": "Local peer. 4.7/5 from 2,200+ Google reviews sits above the H1, and Chat on WhatsApp is the secondary action." },
+    { "id": "toast-hero", "title": "Toast POS", "company": "Toast", "section": "hero", "sourceUrl": "https://pos.toasttab.com/", "screenshotUrl": "https://pos.toasttab.com/", "localImage": "references/toast-hero.png", "caption": "Customer count in the sub, logo strip under the fold", "insight": "Trusted by 180,000 locations sits inside the sub. A video pill above the H1 offers the low-commitment path." },
+    { "id": "booksy-hero", "title": "Booksy Biz", "company": "Booksy", "section": "hero", "sourceUrl": "https://biz.booksy.com/en-us/", "screenshotUrl": "https://biz.booksy.com/en-us/", "localImage": "references/booksy-hero.png", "caption": "H1 names barbers, stylists and salon owners", "insight": "The H1 is the audience. The sub adds every feature on every plan and 330,000+ pros, then one CTA." },
+    { "id": "booksy-proof", "title": "Booksy testimonials", "company": "Booksy", "section": "testimonial", "sourceUrl": "https://biz.booksy.com/en-us/", "screenshotUrl": "https://biz.booksy.com/en-us/", "localImage": "references/booksy-proof.png", "caption": "Video quotes with handles and profile links, ratings below", "insight": "Each quote has a name, social handle and a link to the pro's live profile. Review-site ratings follow directly." },
+    { "id": "square-hero", "title": "Square Appointments", "company": "Square", "section": "hero", "sourceUrl": "https://squareup.com/us/en/appointments", "screenshotUrl": "https://squareup.com/us/en/appointments", "localImage": "references/square-hero.png", "caption": "Short outcome H1, device in real use below", "insight": "Plain outcome H1 and a real counter tablet in use. Two CTAs compete at similar weight, a move to avoid." }
+  ],
+  "footer": "Live captures of public pages on 2026-09-28, desktop 1440x900. No Web Anatomy benchmark data: the MCP was not connected."
+}

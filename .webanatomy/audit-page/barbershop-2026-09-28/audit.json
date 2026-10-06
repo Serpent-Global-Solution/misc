@@ -1,0 +1,327 @@
+{
+  "schema": "webanatomy.audit-page.v2",
+  "target": "meikigo-marketing-site /barbershop (localhost:3002/barbershop)",
+  "industry": "SaaS",
+  "locale": "en",
+  "score": {
+    "overall": 62,
+    "band": [
+      58,
+      66
+    ],
+    "coverage": 0.98,
+    "evidenceBacked": 0.58,
+    "evaluated": 48,
+    "naCount": 1,
+    "categoryScores": [
+      {
+        "category": "Hero",
+        "score": 59,
+        "passCount": 4,
+        "failCount": 3,
+        "naCount": 0,
+        "failedItemIds": [
+          "hero.numeric_proof",
+          "hero.differentiation",
+          "hero.product_visual"
+        ]
+      },
+      {
+        "category": "Value Proposition",
+        "score": 69,
+        "passCount": 5,
+        "failCount": 2,
+        "naCount": 0,
+        "failedItemIds": [
+          "value_prop.specific_promise",
+          "value_prop.problem_clarity"
+        ]
+      },
+      {
+        "category": "Copywriting",
+        "score": 89,
+        "passCount": 8,
+        "failCount": 1,
+        "naCount": 0,
+        "failedItemIds": [
+          "copy.plain_language"
+        ]
+      },
+      {
+        "category": "Trust & Credibility",
+        "score": 43,
+        "passCount": 4,
+        "failCount": 5,
+        "naCount": 0,
+        "failedItemIds": [
+          "trust.quantified_proof",
+          "trust.customer_logos",
+          "trust.content_quality",
+          "trust.trust_badges",
+          "trust.linked_proof"
+        ]
+      },
+      {
+        "category": "Conversion",
+        "score": 43,
+        "passCount": 2,
+        "failCount": 3,
+        "naCount": 1,
+        "failedItemIds": [
+          "conversion.cta_dominance",
+          "conversion.low_commitment_cta",
+          "conversion.post_submit_clarity"
+        ]
+      },
+      {
+        "category": "Design & UX",
+        "score": 73,
+        "passCount": 8,
+        "failCount": 3,
+        "naCount": 0,
+        "failedItemIds": [
+          "design.color_contrast",
+          "design.nav_structure",
+          "design.footer"
+        ]
+      }
+    ]
+  },
+  "currentSnapshot": [
+    {
+      "label": "Promo banner",
+      "text": "14-day free trial · No card · No contract · Cancel anytime"
+    },
+    {
+      "label": "Headline",
+      "text": "This is how a barbershop should run."
+    },
+    {
+      "label": "Subheadline",
+      "text": "Scan to book. No app. One tablet for queue, pay, and reports."
+    },
+    {
+      "label": "Primary CTA",
+      "text": "Start free (nav, hero, 3 pricing cards, closing band)"
+    },
+    {
+      "label": "Risk reducer",
+      "text": "14-day Plus-equivalent trial · No card · No contract (under hero CTA)"
+    },
+    {
+      "label": "Hero visual",
+      "text": "Photo of barber and client on beige backdrop; no product UI"
+    },
+    {
+      "label": "Trust bar",
+      "text": "Ticker: Made for Malaysian barbershops, Works on iOS & Android, Cash/DuitNow/Card, No Extra Hardware"
+    },
+    {
+      "label": "Problem",
+      "text": "Two beats: Most booking software stops at the appointment. / Meikigo doesn't. Imagery shows a European shop with $ prices"
+    },
+    {
+      "label": "Proof",
+      "text": "Two first-name quotes (Akmal, Rizal) with shop names; sub says named pilot quotes with photos come next"
+    },
+    {
+      "label": "Sections",
+      "text": "hero, problem, three screens, feature carousel, setup steps, compare table, pricing, testimonials, FAQ (7), closing CTA, footer"
+    },
+    {
+      "label": "Signup",
+      "text": "Start free opens an expandable signup screen: business type, full name, email, password, terms"
+    }
+  ],
+  "strengths": [
+    {
+      "section": "hero",
+      "what": "One CTA wording (Start free) everywhere, with the no card / no contract line right under it",
+      "why": "Removes the main trial objection at the moment of click. Keep the single action."
+    },
+    {
+      "section": "value_proposition",
+      "what": "The compare table names the typical booking app and shows row by row why Meikigo differs",
+      "why": "Honest unlike framing a shop owner can check against Fresha. Keep it."
+    },
+    {
+      "section": "pricing",
+      "what": "Full RM pricing on the page with tiers, limits and a yearly toggle",
+      "why": "SMB owners want the number before signing up. Transparency builds trust."
+    },
+    {
+      "section": "faq",
+      "what": "The FAQ tackles Fresha, setup time, devices, payments and cancellation",
+      "why": "Answers the real switching objections before the closing CTA."
+    }
+  ],
+  "recommendations": [
+    {
+      "section": "hero",
+      "severity": "HIGH",
+      "kind": "design",
+      "opportunity": "Put the real product (tablet queue board or phone booking #42) in the hero instead of the photo alone",
+      "why": "A cold visitor sees a haircut, not software. The product appears only after scrolling past the problem section.",
+      "failedItemIds": [
+        "hero.product_visual"
+      ]
+    },
+    {
+      "section": "testimonial",
+      "severity": "HIGH",
+      "kind": "copy",
+      "opportunity": "Replace the two unverified shop quotes and the pilot note with honest early-access proof",
+      "why": "Unverifiable shop names plus a visible \"quotes come next\" note read as placeholder proof. They also break the no-invented-proof rule in MESSAGING.md.",
+      "failedItemIds": [
+        "trust.content_quality",
+        "trust.linked_proof"
+      ]
+    },
+    {
+      "section": "value_proposition",
+      "severity": "HIGH",
+      "kind": "copy",
+      "opportunity": "Restore concrete shop pains in the problem section (walk-ins vs bookings, WhatsApp bookings, commissions counted at close)",
+      "why": "One abstract line does not make an owner feel the problem. The concrete beats already exist in data.ts but are commented out.",
+      "failedItemIds": [
+        "value_prop.problem_clarity"
+      ]
+    },
+    {
+      "section": "hero",
+      "severity": "MEDIUM",
+      "kind": "copy",
+      "opportunity": "Make the H1 or sub state the difference from booking apps (booking, queue, payment and report on one tablet)",
+      "why": "The manifesto H1 could fit any salon tool. The sharpest differentiator only appears in the problem line and compare table.",
+      "failedItemIds": [
+        "hero.differentiation"
+      ]
+    },
+    {
+      "section": "hero",
+      "severity": "MEDIUM",
+      "kind": "design",
+      "opportunity": "Raise contrast on the hero sub, trial line and trust ticker",
+      "why": "White text on the light beige photo makes the risk reducer and trust signals hard to read.",
+      "failedItemIds": [
+        "design.color_contrast"
+      ]
+    },
+    {
+      "section": "hero",
+      "severity": "MEDIUM",
+      "kind": "copy",
+      "opportunity": "Replace \"Plus-equivalent trial\" with plain wording that matches the promo banner",
+      "why": "The banner says 14-day free trial, the hero says Plus-equivalent trial. A new visitor does not know what Plus is yet.",
+      "failedItemIds": [
+        "copy.plain_language"
+      ]
+    },
+    {
+      "section": "cta",
+      "severity": "MEDIUM",
+      "kind": "copy",
+      "opportunity": "Say what happens after Start free (create the shop, get the door QR, take the first booking)",
+      "why": "Owners hesitate when the next step is unknown. A one-line next step near the CTA lowers that risk.",
+      "failedItemIds": [
+        "conversion.post_submit_clarity"
+      ]
+    },
+    {
+      "section": "value_proposition",
+      "severity": "MEDIUM",
+      "kind": "copy",
+      "opportunity": "Use one setup-time claim across the page",
+      "why": "Under five minutes, live by afternoon and setup in one afternoon all appear. Conflicting numbers weaken each other."
+    },
+    {
+      "section": "hero",
+      "severity": "MEDIUM",
+      "kind": "design",
+      "opportunity": "Add a low-commitment option next to Start free, such as a short queue walkthrough video",
+      "why": "Some owners want to see the counter flow before creating an account. Today the only path is signup.",
+      "failedItemIds": [
+        "conversion.low_commitment_cta"
+      ]
+    },
+    {
+      "section": "pricing",
+      "severity": "MEDIUM",
+      "kind": "design",
+      "opportunity": "Give every pricing card the same CTA colour and a trial reminder under the button",
+      "why": "Starter and Pro buttons are black while Plus is lime. No card repeats that the trial is free with no card.",
+      "failedItemIds": [
+        "conversion.cta_dominance"
+      ]
+    },
+    {
+      "section": "value_proposition",
+      "severity": "MEDIUM",
+      "kind": "design",
+      "opportunity": "Swap the problem-section imagery for a Malaysian shop context (RM prices, local signage)",
+      "why": "The current image shows $ prices and French signage. That undercuts \"Made for Malaysian barbershops\"."
+    },
+    {
+      "section": "trust",
+      "severity": "LOW",
+      "kind": "design",
+      "opportunity": "Show the payment rails the product supports (DuitNow QR, card networks) as marks in the trust bar",
+      "why": "Recognisable payment marks add credibility without claiming shop counts.",
+      "failedItemIds": [
+        "trust.trust_badges"
+      ]
+    },
+    {
+      "section": "faq",
+      "severity": "LOW",
+      "kind": "copy",
+      "opportunity": "Fix the FAQ sub \"Answers to your question\" to plural",
+      "why": "Small grammar slips near the decision point chip at polish.",
+      "failedItemIds": [
+        "trust.content_quality"
+      ]
+    },
+    {
+      "section": "page",
+      "severity": "LOW",
+      "kind": "design",
+      "opportunity": "Add FAQ or How it works to the nav and group footer links under labels",
+      "why": "Three nav links and one flat footer row make it harder to jump to answers.",
+      "failedItemIds": [
+        "design.nav_structure",
+        "design.footer"
+      ]
+    }
+  ],
+  "pageLevel": [
+    {
+      "section": "page",
+      "opportunity": "Move the compare table up to sit right after the problem section",
+      "why": "The problem line sets up \"booking apps stop at the appointment\". The proof of that claim sits five sections later."
+    },
+    {
+      "section": "page",
+      "opportunity": "Demote the H1 tags inside the product mock screens to non-heading elements",
+      "why": "The page renders four H1s (hero plus mock screens). One H1 keeps the heading outline and SEO signal clean."
+    }
+  ],
+  "sectorSpecific": [
+    {
+      "section": "value_proposition",
+      "opportunity": "Name WhatsApp bookings explicitly as the pain Meikigo replaces",
+      "why": "Malaysian shops run bookings through WhatsApp. The persona page never mentions it (judgment, not the rubric)."
+    },
+    {
+      "section": "pricing",
+      "opportunity": "Add a line for multi-outlet chains and unisex salons pointing at Pro",
+      "why": "The ICP includes chains and salons, but the page speaks only to single barbershops (judgment, not the rubric)."
+    },
+    {
+      "section": "trust",
+      "opportunity": "State plainly that payments settle to the shop's own DuitNow and bank account",
+      "why": "Who holds the money is a top trust question for Malaysian SMB owners (judgment, not the rubric)."
+    }
+  ],
+  "startHere": "hero",
+  "notes": "Rendered from local dev server (localhost:3002) at 1440x900 desktop with Playwright, full scroll, DOM checked. Mobile not evaluated. Industry from context file. Web Anatomy MCP not connected, so no benchmark comparison."
+}

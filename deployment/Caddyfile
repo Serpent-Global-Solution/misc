@@ -1,0 +1,19 @@
+# Edge router for the Meikigo backend.
+# Caddy auto-provisions Let's Encrypt certs for these domains — this requires:
+#   - Public DNS A/AAAA records for API_DOMAIN and AUTH_DOMAIN -> the VM's IP
+#   - OCI Security List + host firewall allowing inbound 80 and 443
+# Domains and ACME email come from the environment (see .env / docker-compose.yml).
+
+{
+	email {$ACME_EMAIL}
+}
+
+# Spring Boot API
+{$API_DOMAIN} {
+	reverse_proxy meikigo-api:8081
+}
+
+# Keycloak (Identity & Access Management)
+{$AUTH_DOMAIN} {
+	reverse_proxy meikigo-keycloak:8080
+}
