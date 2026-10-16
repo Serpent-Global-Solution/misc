@@ -1,0 +1,6 @@
+[submodule "crm"]
+	path = crm
+	url = https://github.com/frappe/crm.git
+[submodule "barbershop-data"]
+	path = barbershop-data
+	url = https://github.com/Serpent-Global-Solution/barbershop-data.git
