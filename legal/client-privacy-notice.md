@@ -1,12 +1,12 @@
 # Meikigo Client Privacy Notice
 
-**Version 1.0 — Draft, [PLACEHOLDER: effective date]**
+**Version 1.0 — Draft, target effective date 31 October 2026 (pending legal review — see `legal/README.md`)**
 
 *This version number and date are what is recorded against your account when you accept it.*
 
 ---
 
-This notice explains how Meikigo [PLACEHOLDER: legal entity name] ("Meikigo", "we", "us") collects, uses, and protects your personal data when you use the Meikigo customer app, in accordance with Malaysia's Personal Data Protection Act 2010 ("PDPA"). It should be read alongside our [Terms of Service](./client-terms-of-service.md).
+This notice explains how Serpents Capital Solution (trading as "Meikigo") ("Meikigo", "we", "us"), a partnership registered in Malaysia under the Registration of Businesses Act 1956 (registration no. 202603217394 (003880138-D)), collects, uses, and protects your personal data when you use the Meikigo customer app, in accordance with Malaysia's Personal Data Protection Act 2010 ("PDPA"). It should be read alongside our [Terms of Service](./client-terms-of-service.md).
 
 ## 1. What personal data we collect
 
@@ -34,31 +34,47 @@ Marketing consent is captured separately from your acceptance of our Terms of Se
 
 **Meikigo support staff can access a Merchant's account** — including customer records held under that Merchant — to help configure the Merchant's shop or resolve a support issue. Opening this kind of support access always requires a stated reason, is time-limited, and is logged. Where a Merchant is on our PRO subscription tier, any change made during such a session is shown on that Merchant's own audit log, so the Merchant can see what was done and when.
 
+## 5. Service providers who process your data, and where
+
+We use a small number of service providers to help run Meikigo. Each is only given the data it needs to do its job, is contractually required to protect it, and may not use it for its own purposes:
+
+- **Supabase** — account authentication and the underlying database. Supabase's infrastructure for this project is located in **Singapore**, not Malaysia (see "Cross-border transfer" below).
+- **CHIP** — processes the card and DuitNow payments you make at a Merchant's counter (see our [Terms of Service](./client-terms-of-service.md), Section 4). Meikigo does not see or store your card details — CHIP handles that directly.
+- **Brevo** — sends transactional email (verification codes, receipts, booking reminders) and, only where you've given marketing consent, promotional email on a Merchant's behalf.
+- **Vercel Analytics** — used on our marketing website only (not the customer app itself), to measure which pages lead to signups. It does not use cookies and does not collect data that identifies you personally.
+
+**Cross-border transfer**: because Supabase's infrastructure for this project is located in Singapore, your personal data is transferred outside Malaysia to be stored and processed. [PLACEHOLDER: the specific PDPA basis relied on for this transfer under section 129 — for example, contractual safeguards with Supabase, or that the transfer is necessary to perform our contract with you — needs confirmation from a lawyer before publishing.]
+
 We do not sell your personal data to third parties.
 
-## 5. Anonymity of reviews
+## 6. Anonymity of reviews
 
 If you submit a star rating for an outlet or a staff member, it is anonymous in both directions: the Merchant and the staff member being rated cannot see who submitted it, and it is never shown alongside your name or account in any Merchant-facing or public view.
 
-## 6. How long we keep your data
+## 7. How long we keep your data
 
 Transaction records (what you bought, from which Merchant, when, and for how much) are financial and tax records under Malaysian law and are generally retained for at least seven years, consistent with LHDN (Inland Revenue Board of Malaysia) record-keeping practice, regardless of what later happens to your account.
 
 If you delete your account, we remove your ability to log in and hold a loyalty balance, and any unredeemed points or referral credit are forfeited. **We do not promise that all your data is erased when you delete your account** — your name, email, and phone number remain attached to your past transaction records, because those are retained as financial records as described above. We are telling you this plainly rather than promising erasure we cannot actually deliver.
 
-Marketing-related consent records and blast recipient history are retained for [PLACEHOLDER: retention period — 12 months after account cancellation/deletion, per current internal policy, to be confirmed]. Support communications are retained for [PLACEHOLDER: retention period — 3 years, per current internal policy, to be confirmed].
+Marketing-related consent records and blast recipient history are retained for 12 months after account cancellation/deletion. Support communications are retained for 3 years.
 
-## 7. Backups
+## 8. Backups
 
 We take a daily backup of our database, retained for 30 days, with point-in-time recovery enabled. **This describes what we do — it is not a guarantee against data loss.** We test our ability to restore from backup on a recurring basis as an internal operational practice.
 
-## 8. Your rights under the PDPA
+## 9. Your rights under the PDPA
 
-You have the right to request access to the personal data we hold about you, and to request that inaccurate data be corrected. Because of the retention position explained in Section 6, a request to access or correct your data may not extend to historical financial transaction records, which we are required to retain.
+You have the right to:
 
-To exercise these rights, or with any question about this notice, contact us at [PLACEHOLDER: data protection / support contact email or address].
+- **Request access** to the personal data we hold about you, and to **request correction** of data that is inaccurate. Because of the retention position explained in Section 7, a request to access or correct your data may not extend to historical financial transaction records, which we are required to retain.
+- **Withdraw your consent** to our processing of your personal data, at any time. This is broader than marketing consent (Section 3) — if you withdraw consent entirely, we will stop processing your data for the purposes that depended on it, though this may mean we can no longer provide you with the parts of the service that require it, and it does not affect our right or obligation to retain data for another lawful reason (for example, the financial-record retention in Section 7).
+- **Request that we stop, or not begin, processing your data where doing so is likely to cause you damage or distress**, under section 42 of the PDPA. We will consider this request and respond to you within the timeframe the PDPA requires.
+- **Lodge a complaint** with Malaysia's Department of Personal Data Protection (Jabatan Perlindungan Data Peribadi), Level 8, Galeria PjH, Jalan P4W, Persiaran Perdana, Presint 4, Pusat Pentadbiran Kerajaan Persekutuan, 62100 Putrajaya — by phone at 03-7456 3888, by email at aduan@pdp.gov.my, or online at daftar.pdp.gov.my/p_aduan — if you believe we have not handled your personal data in accordance with the PDPA.
 
-## 9. Changes to this notice
+To exercise any of these rights, or with any question about this notice, contact us at support@meikigo.com, or by post at F-0203, Emporis Duplex, Psn Surian, Jalan Teknologi, Sek 3, Kota Damansara, 47810 Petaling Jaya, Selangor, Malaysia.
+
+## 10. Changes to this notice
 
 We may update this notice from time to time. Material changes will be presented to you for acceptance, and each acceptance is recorded with its version number and date.
 

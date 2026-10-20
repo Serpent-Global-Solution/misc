@@ -1,6 +1,6 @@
 # Meikigo Client Terms of Service
 
-**Version 1.0 — Draft, [PLACEHOLDER: effective date]**
+**Version 1.0 — Draft, target effective date 31 October 2026 (pending legal review — see `legal/README.md`)**
 
 *This version number and date are what is recorded against your account when you accept these terms.*
 
@@ -8,7 +8,7 @@
 
 ## 1. Who this agreement is with
 
-These Terms of Service ("Terms") govern your use of the Meikigo customer application (currently available as a mobile web app) to browse, queue, and book appointments at barbershops and other service outlets that use the Meikigo platform ("Merchants"). They are an agreement between you and Meikigo [PLACEHOLDER: legal entity name], a company registered in Malaysia ([PLACEHOLDER: SSM registration number]) ("Meikigo", "we", "us").
+These Terms of Service ("Terms") govern your use of the Meikigo customer application (currently available as a mobile web app) to browse, queue, and book appointments at barbershops and other service outlets that use the Meikigo platform ("Merchants"). They are an agreement between you and Serpents Capital Solution (trading as "Meikigo"), a partnership registered in Malaysia under the Registration of Businesses Act 1956 (registration no. 202603217394 (003880138-D)) ("Meikigo", "we", "us").
 
 Meikigo operates the booking and queue platform. Each Merchant is an independent business responsible for the services it sells and delivers to you. Meikigo is not the barbershop, salon, or service provider — it is the platform that connects you to one.
 
@@ -42,6 +42,8 @@ A booking reserves a time; it does not guarantee you will be served at the exact
 
 If you do not arrive for a booking, it may be recorded as a no-show, and Merchants may apply a loyalty-points penalty for missed bookings under a Merchant's own loyalty program, where one exists. A voluntary cancellation before your appointment time is never treated as a no-show and carries no penalty.
 
+If a Merchant cancels your confirmed booking, or is unable to honour it, no no-show penalty applies to you, and you will be offered priority rebooking for the next available slot. Where the Merchant operates a loyalty program, they may also offer a goodwill loyalty-point credit at their discretion. This is consistent with the cancellation-reason requirement in Section 4.
+
 You may cancel your own booking at any time before your appointment time at no cost.
 
 ## 6. Loyalty programs and referrals
@@ -50,7 +52,7 @@ Some Merchants operate a loyalty program (points, punch-card, or both) and/or a 
 
 Loyalty balances are held per Merchant and never transfer between different Merchants on the Meikigo platform.
 
-**If you delete your Meikigo account, any unredeemed loyalty points and unclaimed referral credit are forfeited.** This forfeiture is recorded, but it is not reversible once your account is deleted.
+**If you delete your Meikigo account, any unredeemed loyalty points and unclaimed referral credit are forfeited.** [DRAFT REDLINE — pending lawyer/product confirmation: Before you confirm account deletion, the app will show you any unredeemed point and referral balances across your Merchants and require you to confirm you understand they will be forfeited.] This forfeiture is recorded, but it is not reversible once your account is deleted.
 
 ## 7. Reviews
 
@@ -74,21 +76,41 @@ You may delete your account at any time from within the app. Deleting your accou
 
 You agree not to: create more than one account per phone number; use the platform to harass Merchant staff or other clients; submit fraudulent reviews or attempt to manipulate the review or referral system; or attempt to interfere with the platform's operation.
 
-## 12. Changes to these Terms
+## 12. Suspension and termination
+
+If you breach Section 11 (Acceptable use), or we reasonably believe you have, we may suspend or terminate your account. We will give you notice of this and the reason for it where practical, given the nature of the breach. Suspension or termination does not by itself forfeit anything you are otherwise owed — for example, a loyalty or referral balance you have not already lost under Section 6 — except where the breach itself is the abuse of that balance (for example, manipulating referrals for points).
+
+If Meikigo discontinues the platform entirely — as distinct from a single Merchant closing an outlet (Section 4) — we will give you reasonable advance notice where practical. The data retention and account-deletion positions described in Section 9 and our Privacy Notice continue to apply after the platform closes.
+
+## 13. Intellectual property
+
+The Meikigo app, its software, design, and the Meikigo name and logo belong to Meikigo or its licensors. These Terms do not give you any right to use Meikigo's trademarks, branding, or app content beyond using the app as intended for its purpose. Content a Merchant provides through the app — service descriptions, photos, pricing — remains that Merchant's own.
+
+## 14. Changes to these Terms
 
 We may update these Terms from time to time. Where we make a material change, we will present the updated Terms for your acceptance, and your continued use of the app after that point constitutes acceptance of the updated version. Each acceptance is recorded with its version number and the date you accepted it.
 
-## 13. Liability
+## 15. Liability
 
 The platform is provided on an "as available" basis. Meikigo is not responsible for the quality of services delivered by a Merchant, disputes between you and a Merchant over service quality or pricing, or losses arising from a Merchant's own scheduling, staffing, or business decisions. Nothing in these Terms limits liability that cannot lawfully be limited under Malaysian law.
 
-## 14. Governing law
+## 16. General provisions
+
+**Entire agreement**: These Terms, together with our Privacy Notice, are the entire agreement between you and Meikigo about your use of the app, and replace any earlier agreement or understanding on the same subject.
+
+**Severability**: If any part of these Terms is found unenforceable, the rest continues to apply.
+
+**Assignment**: You may not transfer your rights or obligations under these Terms to someone else. Meikigo may assign these Terms as part of a merger, acquisition, or sale of all or part of its business, and will tell you if this happens.
+
+**Notices**: We will contact you using the email address or phone number on your account, so please keep them up to date.
+
+## 17. Governing law
 
 These Terms are governed by the laws of Malaysia. [PLACEHOLDER: specific courts/jurisdiction clause, to be confirmed by legal review].
 
-## 15. Contact us
+## 18. Contact us
 
-If you have questions about these Terms, contact us at [PLACEHOLDER: support contact email/address].
+If you have questions about these Terms, contact us at support@meikigo.com, or by post at F-0203, Emporis Duplex, Psn Surian, Jalan Teknologi, Sek 3, Kota Damansara, 47810 Petaling Jaya, Selangor, Malaysia.
 
 ---
 
