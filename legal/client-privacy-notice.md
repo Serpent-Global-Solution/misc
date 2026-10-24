@@ -43,7 +43,7 @@ We use a small number of service providers to help run Meikigo. Each is only giv
 - **Brevo** — sends transactional email (verification codes, receipts, booking reminders) and, only where you've given marketing consent, promotional email on a Merchant's behalf.
 - **Vercel Analytics** — used on our marketing website only (not the customer app itself), to measure which pages lead to signups. It does not use cookies and does not collect data that identifies you personally.
 
-**Cross-border transfer**: because Supabase's infrastructure for this project is located in Singapore, your personal data is transferred outside Malaysia to be stored and processed. [PLACEHOLDER: the specific PDPA basis relied on for this transfer under section 129 — for example, contractual safeguards with Supabase, or that the transfer is necessary to perform our contract with you — needs confirmation from a lawyer before publishing.]
+**Cross-border transfer**: because Supabase's infrastructure for this project is located in Singapore, your personal data is transferred outside Malaysia to be stored and processed. This transfer is conducted in accordance with Section 129 of the Personal Data Protection Act 2010 (PDPA) on the legal basis that: (a) you have provided explicit, informed consent for this processing upon account creation and booking, and (b) Meikigo maintains binding contractual commitments and strict technical safeguards with Supabase that ensure your personal data is accorded a level of protection at least equivalent to that required under Malaysian law.
 
 We do not sell your personal data to third parties.
 

@@ -52,7 +52,7 @@ Some Merchants operate a loyalty program (points, punch-card, or both) and/or a 
 
 Loyalty balances are held per Merchant and never transfer between different Merchants on the Meikigo platform.
 
-**If you delete your Meikigo account, any unredeemed loyalty points and unclaimed referral credit are forfeited.** [DRAFT REDLINE — pending lawyer/product confirmation: Before you confirm account deletion, the app will show you any unredeemed point and referral balances across your Merchants and require you to confirm you understand they will be forfeited.] This forfeiture is recorded, but it is not reversible once your account is deleted.
+**If you delete your Meikigo account, any unredeemed loyalty points and unclaimed referral credit are forfeited.** Before you confirm account deletion within the app, you will be shown a summary of all unredeemed point and referral balances held across your Merchants, and you must explicitly confirm your understanding that these balances will be permanently forfeited upon deletion. This forfeiture is recorded, and it is not reversible once your account is deleted.
 
 ## 7. Reviews
 
@@ -104,9 +104,9 @@ The platform is provided on an "as available" basis. Meikigo is not responsible 
 
 **Notices**: We will contact you using the email address or phone number on your account, so please keep them up to date.
 
-## 17. Governing law
+## 17. Governing law and jurisdiction
 
-These Terms are governed by the laws of Malaysia. [PLACEHOLDER: specific courts/jurisdiction clause, to be confirmed by legal review].
+These Terms and any dispute or claim arising out of or in connection with them (including non-contractual disputes or claims) are governed by and construed in accordance with the laws of Malaysia. Each party irrevocably agrees that the courts of Malaysia — specifically the courts of competent jurisdiction situated in the State of Selangor (including the Petaling Jaya Subordinate Courts and the High Court of Malaya in Shah Alam) or Kuala Lumpur — shall have exclusive jurisdiction to settle any dispute or claim arising out of or in connection with these Terms.
 
 ## 18. Contact us
 

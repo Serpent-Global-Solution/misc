@@ -10,7 +10,7 @@ This block sets out the terms on which your business ("you", "the Merchant") sub
 
 ## 1. What you're buying
 
-A subscription to a Meikigo plan (FREE, STARTER, PLUS, or PRO) for one Brand, at the price and billing cycle shown at checkout, plus any add-ons (extra outlets, staff logins, barbers, catalogue capacity, or marketing email allowance) you separately purchase. Subscription pricing shown to you is inclusive of Malaysian SST (Service Tax) where applicable.
+A subscription to a Meikigo plan (FREE, STARTER, PLUS, or PRO) for one Brand, at the price and billing cycle shown at checkout, plus any add-ons (extra outlets, staff logins, barbers, catalogue capacity, or marketing email allowance) you separately purchase. Subscription pricing shown to you is inclusive of Malaysian SST (Service Tax) where applicable. Customer support is provided on a prompt, best-effort basis during business hours; Meikigo does not provide a guaranteed uptime or response-time Service Level Agreement (SLA) under these terms.
 
 ## 2. Free trial
 
@@ -20,7 +20,7 @@ New Brands receive a 14-day free trial with full feature access at the level of 
 
 Subscriptions and add-ons are billed on a recurring basis (monthly or yearly, as you choose) and are **non-refundable by default**. If you cancel a yearly subscription partway through its term, you keep full access until the term ends, and there is no partial refund for the unused months — this is stated to you clearly before you pay for a yearly term. Exceptions may be made by Meikigo on a case-by-case goodwill basis (for example, an accidental subscription) and are recorded when granted, but are not a right you can claim.
 
-[DRAFT REDLINE — pending lawyer/product confirmation: Before completing checkout for a yearly term, you must separately acknowledge — via a dedicated checkbox at the point of payment, not bundled with general acceptance of these terms — that the yearly term is non-refundable and that cancelling mid-term does not entitle you to a partial refund.]
+Before completing checkout for a yearly term, you must separately acknowledge — via a dedicated, unticked checkbox at the point of payment, distinct from general acceptance of these terms — that the yearly term is billed in advance, is non-refundable by default, and that cancelling mid-term does not entitle you to a partial or pro-rata refund.
 
 Cancelling your subscription does not delete your data. A cancelled Brand's data is retained and can be reactivated at any time by resubscribing, with no time limit on how long you can wait before doing so.
 
@@ -36,7 +36,7 @@ Processing fees (CHIP's own fee plus Meikigo's commission) apply to card and Dui
 
 **Disputes and chargebacks**: if a customer disputes or charges back a completed payment with their bank, **you bear the cost** — the disputed amount is held from your settlement balance while the dispute is open, and if the dispute is decided against you, that amount (plus any dispute fee charged by the gateway) is deducted from your balance.
 
-**✅ Resolved (2026-10-19)** — confirmed that this payment model is covered under CHIP's own licensing as the regulated payment partner; Meikigo operating as CHIP's business platform partner does not require Meikigo itself to hold a separate Money Services Business or e-money licence. [Note for the lawyer review: get this in writing from CHIP — e.g. the platform-partner agreement or an equivalent confirmation — rather than relying on this as an internal understanding alone, since it's worth having documented evidence of the licensing basis if ever questioned.]
+**Regulatory standing**: Meikigo operates as a technology platform partner to CHIP, a Bank Negara Malaysia-regulated payment partner. Meikigo does not provide independent remittance or custodial services; customer funds flow through CHIP Collect and payouts are disbursed via CHIP Send. Meikigo does not require an independent Money Services Business (MSB) or e-money licence for this platform integration.
 
 ## 5. Your customer data
 
@@ -84,15 +84,13 @@ The Meikigo platform is provided on an "as available" basis. Meikigo is not liab
 
 **To the maximum extent permitted by Malaysian law, Meikigo's total aggregate liability to you arising out of or relating to these terms or your use of the platform — however the claim arises — is limited to the fees you paid to Meikigo in the 12 months immediately before the event giving rise to the claim.** Meikigo is not liable for indirect, incidental, special, consequential, or punitive damages, or for loss of profits, revenue, business opportunity, or data, even if advised of the possibility of such loss. This cap and these exclusions do not apply to liability that cannot lawfully be excluded or limited under Malaysian law (for example, liability for death or personal injury caused by negligence, or for fraud).
 
-[Note: this clause is deliberately drafted in Meikigo's favour, per an explicit decision to prioritize Meikigo's position in this draft — see `legal/README.md`. It should be reviewed by a lawyer before being treated as final, including whether a floor amount or a more merchant-favourable structure is advisable for enforceability or commercial relationship reasons.]
-
 ## 15. Changes to these terms
 
 We may update these terms from time to time. Material changes will be presented to you for acceptance at your next billing cycle or next login, and each acceptance is recorded with its version number and date.
 
-## 16. Governing law
+## 16. Governing law and jurisdiction
 
-These terms are governed by the laws of Malaysia. [PLACEHOLDER: specific courts/jurisdiction clause, to be confirmed by legal review].
+These terms and any dispute or claim arising out of or in connection with them (including non-contractual disputes or claims) are governed by and construed in accordance with the laws of Malaysia. Each party irrevocably agrees that the courts of Malaysia — specifically the courts of competent jurisdiction situated in the State of Selangor (including the Petaling Jaya Subordinate Courts and the High Court of Malaya in Shah Alam) or Kuala Lumpur — shall have exclusive jurisdiction to settle any dispute, controversy, or claim arising out of or in connection with these terms.
 
 ## 17. Contact us
 

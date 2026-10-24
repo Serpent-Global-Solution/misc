@@ -326,14 +326,37 @@ only genuinely external/paid items left across all three documents are the juris
 clause and the full lawyer review itself (Tier 5), plus the Sdn Bhd vs. partnership
 decision (Tier 4) and the loyalty-forfeiture/yearly-checkbox product work (Tier 3).
 
+## Policy Decisions & Consolidation (2026-10-24)
+
+All open policy decisions were reviewed and locked in:
+- **Court jurisdiction resolved**: Because Meikigo is registered at Emporis Duplex, Kota
+  Damansara, jurisdiction is formally set to the courts of the State of Selangor (Petaling
+  Jaya Subordinate Courts, High Court of Malaya in Shah Alam) and Kuala Lumpur.
+- **Cross-border transfer legal basis**: Supabase Singapore hosting is grounded in explicit
+  user consent obtained at registration/booking plus contractual safeguards under PDPA
+  Section 129.
+- **Consumer-risk redlines adopted**:
+  - Loyalty forfeiture warning dialog confirmed for Client ToS §6 upon account deletion.
+  - Dedicated unticked non-refundable acknowledgment checkbox confirmed for Merchant
+    Terms §3 at annual checkout.
+  - Symmetric booking cancellation remedy confirmed for Client ToS §5 (priority rebooking +
+    discretionary goodwill loyalty points).
+- **PRO tier support commitment**: Clarified that support is provided on a prompt,
+  best-effort basis during business hours, without a binding uptime or response-time SLA.
+- **Merchant liability cap**: Provider-favorable cap (preceding 12 months' fees, RM0 for
+  Free Tier, no consequential damages) locked in as Meikigo's starting posture.
+- **Consolidation**: All documents merged into [`final.md`](./final.md) for legal review.
+
 ## Next steps
 
-1. Fill in every placeholder above with real values.
-2. Send all three documents to a qualified Malaysian lawyer for review — PDPA
-   compliance, consumer-contract enforceability, and the specific retention/backup/
-   support-access language should all be checked by someone qualified to do so, not
-   assumed correct because they match the product spec.
-3. Once approved, wire the accepted version number into the actual signup/checkout
+1. Send [`final.md`](./final.md) to a qualified Malaysian lawyer for formal review —
+   PDPA compliance, enforceability of the merchant liability cap, and partnership
+   exposure advice.
+2. Build the two UI requirements before their respective features go live:
+   - Account deletion modal in `meikigo-customer-webapp`.
+   - Yearly billing cycle & dedicated non-refundable checkbox in `meikigo-brand`.
+3. Implement automated settlement schedules (bi-daily/weekly/monthly + month-end sweep)
+   in `meikigo-api` (`SettlementService.cs`).
+4. Once lawyer approved, wire the accepted version number into the actual signup/checkout
    flows (`meikigo-customer-webapp` registration, `meikigo-brand` subscription
-   checkout) so acceptance is recorded against the real, reviewed version — not this
-   draft's version 1.0.
+   checkout).
