@@ -14,37 +14,42 @@ A subscription to a Meikigo plan (FREE, STARTER, PLUS, or PRO) for one Brand, at
 
 ## 2. Free trial
 
-New Brands receive a 14-day free trial with full feature access at the level of our PLUS plan. At the end of the trial, you must actively choose a paid plan or the FREE tier to continue — your Brand does not automatically convert to a paid subscription, and it does not silently continue on trial features. If you do not choose, your Brand becomes read-only until you do.
+New Brands receive a 14-day free trial with full feature access at the level of our PLUS plan. At the end of the trial, you must actively choose a paid plan or the FREE tier to continue — your Brand does not automatically convert to a paid subscription, no card is required for the trial, and your Brand does not silently continue on trial features. If you do not choose, your Brand becomes read-only until you do.
 
 ## 3. Billing, cancellation, and refunds
 
-Subscriptions and add-ons are billed on a recurring basis (monthly or yearly, as you choose) and are **non-refundable by default**. If you cancel a yearly subscription partway through its term, you keep full access until the term ends, and there is no partial refund for the unused months — this is stated to you clearly before you pay for a yearly term. Exceptions may be made by Meikigo on a case-by-case goodwill basis (for example, an accidental subscription) and are recorded when granted, but are not a right you can claim.
+**How billing works.** Subscriptions and add-ons are billed in advance for each billing cycle. **Meikigo does not store your card and does not charge you automatically.** Before each new cycle, we email you an invoice with a payment link, issued up to 3 days before payment is due, and send one reminder the day before the due date if it is still unpaid. Your subscription continues only when you pay that invoice. If an invoice is not paid by its due date, your Brand becomes read-only (your data is kept — see below) until it is paid or you move to the FREE tier.
+
+**How to cancel.** You can cancel a paid subscription at any time by switching your Brand to the FREE tier from your billing settings, or by emailing support@meikigo.com. The change takes effect at the end of your current paid cycle, and no further invoices are issued for the paid plan.
+
+Subscriptions and add-ons are **non-refundable by default**. If you cancel a yearly subscription partway through its term, you keep full access until the term ends, and there is no partial refund for the unused months — this is stated to you clearly before you pay for a yearly term. Exceptions may be made by Meikigo on a case-by-case goodwill basis (for example, an accidental subscription) and are recorded when granted, but are not a right you can claim.
 
 Before completing checkout for a yearly term, you must separately acknowledge — via a dedicated, unticked checkbox at the point of payment, distinct from general acceptance of these terms — that the yearly term is billed in advance, is non-refundable by default, and that cancelling mid-term does not entitle you to a partial or pro-rata refund.
 
-Cancelling your subscription does not delete your data. A cancelled Brand's data is retained and can be reactivated at any time by resubscribing, with no time limit on how long you can wait before doing so.
+Cancelling a paid subscription does not delete your data. If your Brand stops using Meikigo altogether — you close your Brand account, or it remains read-only because an invoice is unpaid — its data is kept for **24 months** from that point, and you can reactivate it at any time in that period. You can export your customer list and sales history at any time before then. After 24 months, personal data held under your Brand is deleted or anonymised, except transaction records we must keep under Malaysian tax law.
 
 ## 4. Payment processing for your sales
 
 Customer payments you take through Meikigo (card and DuitNow QR at the counter, via our POS app) are processed by our payment partner, CHIP — CHIP Collect for taking payment, CHIP Send for paying out to you. Meikigo acts as CHIP's platform partner: your Brand's sales flow into Meikigo's own CHIP account, and Meikigo's own records — not CHIP's — track the balance owed to your Brand specifically.
 
-Processing fees (CHIP's own fee plus Meikigo's commission) apply to card and DuitNow QR sales; cash sales carry no fee. Current rates are shown in your merchant dashboard rather than fixed here, since they may be adjusted from time to time. You choose, at Brand or Outlet level, whether your Brand absorbs this fee (reducing what you net per sale) or passes it to the customer at checkout (the customer pays a surcharge, you net the full listed price) — this choice, and its consequences for your own pricing and disclosures to your own customers, is yours to make.
+Processing fees (CHIP's own fee plus Meikigo's commission) apply to card and DuitNow QR sales; cash sales carry no fee. Current rates are shown in your merchant dashboard rather than fixed here. We will give you at least 30 days' notice before any increase in these rates takes effect. You choose, at Brand or Outlet level, whether your Brand absorbs this fee (reducing what you net per sale) or passes it to the customer at checkout (the customer pays a surcharge, you net the full listed price). If you pass it on, you must make sure the surcharge is shown to the customer before they pay.
+
+**Your settlement balance belongs to you.** Funds collected for your sales and held in Meikigo's CHIP account until payout are held on your behalf. They are not Meikigo's own funds, and Meikigo may only deduct from them the fees, refunds, and dispute amounts described in these terms.
 
 **Payouts**: you choose how often your balance is disbursed — bi-daily, weekly, or monthly — paid to your registered bank account via CHIP Send, and you bear the transaction cost of each payout. Regardless of your chosen frequency, your full available balance is disbursed in full by the end of every calendar month — Meikigo does not hold your funds beyond that point.
 
 **Refunds** are issued to the customer's original payment method.
 
 **Disputes and chargebacks**: if a customer disputes or charges back a completed payment with their bank, **you bear the cost** — the disputed amount is held from your settlement balance while the dispute is open, and if the dispute is decided against you, that amount (plus any dispute fee charged by the gateway) is deducted from your balance.
-
-**Regulatory standing**: Meikigo operates as a technology platform partner to CHIP, a Bank Negara Malaysia-regulated payment partner. Meikigo does not provide independent remittance or custodial services; customer funds flow through CHIP Collect and payouts are disbursed via CHIP Send. Meikigo does not require an independent Money Services Business (MSB) or e-money licence for this platform integration.
-
 ## 5. Your customer data
 
 **You own your customer list.** Meikigo holds it on your behalf as part of operating the platform for you, but it is your data, associated with your Brand.
 
-**If you import an existing customer list** (for example, from a paper system or a previous point-of-sale), and you declare during that import that those customers had already consented to receive marketing from you, **you are the one responsible for that representation being true.** Meikigo records that the consent for those customers came from your declaration rather than directly from the customer, and this distinction is kept for as long as the record exists — but the accuracy of the declaration itself is your responsibility as the Merchant, not something Meikigo verifies on your behalf.
+**If you import an existing customer list** (for example, from a paper system or a previous point-of-sale), and you declare during that import that those customers had already consented to receive marketing from you, **you are the one responsible for that representation being true.** Meikigo records that the consent for those customers came from your declaration rather than directly from the customer, and this distinction is kept for as long as the record exists — but the accuracy of the declaration itself is your responsibility as the Merchant, not something Meikigo verifies on your behalf. The first marketing email sent to each such customer will tell them that they are receiving it because your business indicated they had previously agreed to hear from you, and will give them a one-click way to unsubscribe.
 
 **Every bulk export or import of your customer list is logged** — who did it, when, and how many records — for the same reason your own staff's access is traceable elsewhere in these terms: a bulk customer-list movement is the action most likely to need an answer later if something goes wrong.
+
+**How Meikigo handles your customer data.** For the customer data held under your Brand, Meikigo acts as your data processor. Meikigo will: (a) process it only to provide the platform to you and as you instruct through the platform; (b) keep it secure, in line with the PDPA's security requirements; (c) use only the service providers listed in our customer Privacy Notice to process it; and (d) when your Brand's data is due to be deleted, delete it or make it anonymous, except for transaction records we must keep under Malaysian law.
 
 ## 6. Marketing email allowance
 
@@ -64,7 +69,9 @@ Your own staff (Admins and Cashiers you provision) can see the customers and tra
 
 ## 10. PDPA compliance
 
-Meikigo processes personal data — yours and your customers' — in accordance with the Personal Data Protection Act 2010. Full detail on what is collected and why is set out in our Privacy Notice for customers and in your merchant onboarding materials. As the Merchant, you remain responsible for your own compliance obligations toward your customers, including obtaining valid consent where you collect it directly (for example, at your own counter or through an imported list).
+Meikigo processes personal data — yours and your customers' — in accordance with the Personal Data Protection Act 2010. Full detail on what is collected and why is set out in our Privacy Notice for customers and in your merchant onboarding materials. As the Merchant, you remain responsible for your own compliance obligations toward your customers, including obtaining valid consent where you collect it directly (for example, at your own counter or through an imported list), and giving customers whose details you add or import the privacy notice the PDPA requires.
+
+You agree to compensate Meikigo for any loss, fine, or claim Meikigo suffers because a consent declaration you made was untrue, or because you otherwise breached the PDPA in collecting or using your customers' data.
 
 ## 11. Security incidents
 
@@ -82,7 +89,7 @@ If a dispute arises between you and Meikigo under these terms, we will first try
 
 The Meikigo platform is provided on an "as available" basis. Meikigo is not liable for losses arising from your own business decisions, staffing, pricing, or scheduling choices, or for disputes between you and your customers over service quality.
 
-**To the maximum extent permitted by Malaysian law, Meikigo's total aggregate liability to you arising out of or relating to these terms or your use of the platform — however the claim arises — is limited to the fees you paid to Meikigo in the 12 months immediately before the event giving rise to the claim.** Meikigo is not liable for indirect, incidental, special, consequential, or punitive damages, or for loss of profits, revenue, business opportunity, or data, even if advised of the possibility of such loss. This cap and these exclusions do not apply to liability that cannot lawfully be excluded or limited under Malaysian law (for example, liability for death or personal injury caused by negligence, or for fraud).
+**To the maximum extent permitted by Malaysian law, Meikigo's total aggregate liability to you arising out of or relating to these terms or your use of the platform — however the claim arises — is limited to the subscription and add-on fees you paid to Meikigo in the 12 months immediately before the event giving rise to the claim.** Meikigo is not liable for indirect, incidental, special, consequential, or punitive damages, or for loss of profits, revenue, business opportunity, or data, even if advised of the possibility of such loss. This cap and these exclusions do not apply to Meikigo's obligation to pay out your settlement balance under Section 4, or to: (a) liability arising from Meikigo's gross negligence, wilful misconduct, or fraud; (b) liability arising from Meikigo's own breach of its data-protection or confidentiality obligations under these terms or the PDPA; or (c) any other liability that cannot lawfully be excluded or limited under Malaysian law (for example, liability for death or personal injury caused by negligence).
 
 ## 15. Changes to these terms
 

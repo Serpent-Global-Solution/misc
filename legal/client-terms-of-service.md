@@ -36,11 +36,11 @@ The app does not send push notifications, SMS alerts, or queue-position updates 
 
 ## 5. Queueing and booking
 
-When you join a walk-in queue or make a booking, you select the service(s) you want and the staff member who will perform them; a staff selection is required and cannot be left as "no preference." The price you are shown at the time you join or book is the price you will be charged, even if the Merchant's prices change before your visit — except for any service added at the counter after you arrive, which is priced at the time it is added.
+When you join a walk-in queue or make a booking, you select the service(s) you want and the staff member who will perform them; a staff selection is required and cannot be left as "no preference." The price you are shown at the time you join or book is the price you will be charged, even if the Merchant's prices change before your visit — except for any service added at the counter after you arrive, which is priced at the time it is added, and any card or DuitNow QR payment surcharge the Merchant applies, which will be shown to you before you pay.
 
 A booking reserves a time; it does not guarantee you will be served at the exact minute reserved if the Merchant is running behind schedule on walk-in customers already present. A walk-in queue number is a running position, not a guaranteed time.
 
-If you do not arrive for a booking, it may be recorded as a no-show, and Merchants may apply a loyalty-points penalty for missed bookings under a Merchant's own loyalty program, where one exists. A voluntary cancellation before your appointment time is never treated as a no-show and carries no penalty.
+If you do not arrive for a booking, it may be recorded as a no-show. A Merchant that operates a loyalty program may apply a loyalty-points penalty for a no-show only if: (a) its no-show policy was shown to you in the app before you made that booking; and (b) the penalty does not exceed the loyalty points that visit would have earned you. A voluntary cancellation before your appointment time is never treated as a no-show and carries no penalty.
 
 If a Merchant cancels your confirmed booking, or is unable to honour it, no no-show penalty applies to you, and you will be offered priority rebooking for the next available slot. Where the Merchant operates a loyalty program, they may also offer a goodwill loyalty-point credit at their discretion. This is consistent with the cancellation-reason requirement in Section 4.
 
@@ -66,11 +66,11 @@ If your details were added to a Merchant's customer list by that Merchant (for e
 
 ## 9. Data retention
 
-We explain in detail what is retained and why in our [Privacy Notice](./client-privacy-notice.md). In summary: because sales records are accounting and tax records under Malaysian law, they are retained even if you later delete your account or ask that other data be removed. We do not promise complete erasure of your data — we explain plainly what stays, and why, in the Privacy Notice.
+We explain in detail what is retained and why in our [Privacy Notice](./client-privacy-notice.md). In summary: because sales records are accounting and tax records under Malaysian law, the records themselves are retained even if you later delete your account, but with your identity removed as described in Section 10. We explain plainly what stays, and why, in the Privacy Notice.
 
 ## 10. Account deletion
 
-You may delete your account at any time from within the app. Deleting your account removes your ability to log in, be looked up at the counter, and hold a loyalty balance going forward, and it forfeits any unredeemed loyalty points and referral credit as described in Section 6. It does not remove your name, email, or phone number from past transaction records, which Merchants and Meikigo retain as financial records.
+You may delete your account at any time from within the app. Deleting your account removes your ability to log in, be looked up at the counter, and hold a loyalty balance going forward, and it forfeits any unredeemed loyalty points and referral credit as described in Section 6. Past transaction records are kept as financial records, but your name, email, and phone number are removed from them and replaced with an anonymous reference, except on any individual e-invoice issued in your name at your request (see the Privacy Notice).
 
 ## 11. Acceptable use
 
@@ -88,7 +88,7 @@ The Meikigo app, its software, design, and the Meikigo name and logo belong to M
 
 ## 14. Changes to these Terms
 
-We may update these Terms from time to time. Where we make a material change, we will present the updated Terms for your acceptance, and your continued use of the app after that point constitutes acceptance of the updated version. Each acceptance is recorded with its version number and the date you accepted it.
+We may update these Terms from time to time. Where we make a material change, we will present the updated Terms in the app and ask you to accept them before you continue using the service; if you do not accept, you may delete your account as described in Section 10. Each acceptance is recorded with its version number and the date you accepted it.
 
 ## 15. Liability
 
@@ -106,7 +106,7 @@ The platform is provided on an "as available" basis. Meikigo is not responsible 
 
 ## 17. Governing law and jurisdiction
 
-These Terms and any dispute or claim arising out of or in connection with them (including non-contractual disputes or claims) are governed by and construed in accordance with the laws of Malaysia. Each party irrevocably agrees that the courts of Malaysia — specifically the courts of competent jurisdiction situated in the State of Selangor (including the Petaling Jaya Subordinate Courts and the High Court of Malaya in Shah Alam) or Kuala Lumpur — shall have exclusive jurisdiction to settle any dispute or claim arising out of or in connection with these Terms.
+These Terms and any dispute or claim arising out of or in connection with them (including non-contractual disputes or claims) are governed by and construed in accordance with the laws of Malaysia. Each party irrevocably agrees that the courts of Malaysia — specifically the courts of competent jurisdiction situated in the State of Selangor (including the Petaling Jaya Subordinate Courts and the High Court of Malaya in Shah Alam) or Kuala Lumpur — shall have exclusive jurisdiction to settle any dispute or claim arising out of or in connection with these Terms. Nothing in this Section affects your right to bring a claim before the Tribunal for Consumer Claims Malaysia under the Consumer Protection Act 1999.
 
 ## 18. Contact us
 

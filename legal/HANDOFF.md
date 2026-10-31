@@ -1,4 +1,4 @@
-# Legal Documents — Handoff to Haziq (Updated 2026-10-24)
+# Legal Documents — Handoff to Haziq (Updated 2026-10-31)
 
 Status snapshot of the T&C / Privacy Notice work, so this can be picked up without
 re-reading the whole history. Full reasoning and detail for everything below lives in
@@ -45,7 +45,19 @@ re-reading the whole history. Full reasoning and detail for everything below liv
    frequency-selection + forced month-end disbursement policy now written into the
    merchant terms (§4). The document states the intended policy; the system needs to
    catch up to it before launch.
-5. **Full lawyer review** — the actual gate. Hand [`final.md`](./final.md) to a Malaysian
+5. **Build items from the 2026-10-31 audit** (terms already updated; see README):
+   - Self-serve "switch to FREE" in `meikigo-brand` billing settings (today it's email only).
+   - First marketing email to merchant-imported customers must explain why + one-click unsubscribe.
+   - No-show penalty (not built yet) must ship with policy shown before booking + cap at points that visit would earn.
+   - Customer data-breach notification process (none exists today).
+6. **Build items from the decisions taken under Malaysian law** (terms already updated; detail in `final.md` Appendix §3–4):
+   - Scheduled deletion/anonymisation of Brands closed or read-only for 24 months (keep tax records).
+   - Account deletion must pseudonymise customer identity on past transactions (except individual e-invoices).
+   - Confirm-before-linking step at registration for shop records under the same phone number.
+   - Data-portability export on request (a manual export by the DPO is enough at first).
+   - POS must show any card/QR surcharge before payment.
+   - Have the BM Privacy Notice (`notis-privasi-pelanggan.md`) checked by counsel or a certified translator.
+7. **Full lawyer review** — the actual gate. Hand [`final.md`](./final.md) to a Malaysian
    lawyer for flat-fee review and sign-off.
-6. **Business registration renewal** — Serpents Capital Solution's registration expires
+8. **Business registration renewal** — Serpents Capital Solution's registration expires
    16 August 2027. Unrelated to the documents themselves, just a calendar reminder.

@@ -347,6 +347,86 @@ All open policy decisions were reviewed and locked in:
   Free Tier, no consequential damages) locked in as Meikigo's starting posture.
 - **Consolidation**: All documents merged into [`final.md`](./final.md) for legal review.
 
+## Consumer-risk audit fixes (2026-10-31)
+
+A second ToS/privacy audit (`tos-clause-scanner`) of `final.md` produced six findings,
+checked against the code. Decisions and fixes, applied to `final.md` and the three formal
+documents:
+
+- **Merchant liability cap (Merchant §14)**: added carve-outs for Meikigo's gross
+  negligence, wilful misconduct, fraud, and its own data-protection/confidentiality
+  breaches. The 12-month-fees cap (RM0 on FREE) is otherwise unchanged. Previously
+  `final.md` had no carve-out at all and the formal version only covered death/injury
+  and fraud.
+- **Billing and cancellation (Merchant §3)**: the code has **no auto-renewal and no
+  stored card**. Each cycle raises an invoice with a CHIP payment link up to 3 days
+  before it's due, plus one reminder the day before; if it goes unpaid, the account
+  becomes read-only. The terms now say this plainly. Cancelling means switching to FREE
+  in billing settings or emailing support, effective at the end of the paid cycle.
+  **Engineering gap**: the self-serve switch to FREE doesn't exist yet ("Manage plan"
+  only opens an email).
+- **Merchant-declared marketing consent (Privacy §3, Merchant §5)**: the first marketing
+  email to such a customer must say why they're receiving it and carry a one-click
+  unsubscribe. **Engineering gap**: needs the Brevo template/send logic.
+- **No-show penalty (Client ToS §5)**: a penalty only applies if the shop's no-show
+  policy was shown in the app before booking, capped at the points that visit would have
+  earned. **Note**: no-show point deduction isn't built at all yet; both rules must ship
+  with it.
+- **Star ratings**: kept permanent (matches code). No change.
+- **Customer breach notification (Privacy §9, new)**: notify affected customers without
+  undue delay where significant harm is likely, and the Commissioner where required.
+  Later sections renumbered (old §9–§10 are now §10–§11). **Engineering/ops gap**: no
+  mechanism exists today.
+- **Deemed-consent wording removed (Client ToS §14, formal version)**: it said continued
+  use = acceptance, which contradicted `final.md`. Both now require active acceptance,
+  with account deletion as the alternative.
+
+## Legal-style review fixes (2026-10-31)
+
+An internal review written as Malaysian counsel would (not a substitute for a practising
+lawyer's sign-off) produced further drafting fixes, applied to `final.md` and the three
+formal documents:
+
+- **Privacy Notice (PDPA s.7)**: states which fields are required vs optional; names a
+  Data Protection Officer role (contact `support@meikigo.com`, subject "PDPA request",
+  no person named); commits to answering access requests within 21 days.
+- **Cross-border**: Brevo (EU) now disclosed alongside Supabase (Singapore — confirmed;
+  `deployment/backup-restore-runbook.md`'s OCI database description is stale). The main
+  s.129 basis is now "substantially similar law" plus contracts; consent is secondary.
+- **Merchant §4**: settlement funds declared to be held on the Merchant's behalf; 30
+  days' notice for fee increases; Merchant must show any surcharge before payment;
+  removed the MSB-licence and "BNM-regulated" statements (misrepresentation risk —
+  kept as an internal position in the `final.md` appendix).
+- **Merchant §14**: the cap never limits paying out settlement balances; the cap base is
+  "subscription and add-on fees" in both versions.
+- **Merchant §5/§10**: new data-processor clause; Merchant must give imported customers
+  a PDPA notice; Merchant indemnity for false consent declarations.
+- **Client ToS**: surcharge exception to the price guarantee; right to use the Tribunal
+  for Consumer Claims preserved.
+- **Accuracy**: ratings "anonymous" (not "100%"), with an "except as required by law"
+  exception; "security team" replaced with an accurate description of log review;
+  "registered office" changed to "principal place of business".
+
+## Open decisions resolved under Malaysian law (2026-10-31)
+
+Instruction: every open decision follows what Malaysian law requires. Full record in
+`final.md` Appendix §4.
+
+- **Cancelled/closed Brands**: data kept 24 months, then deleted/anonymised except tax
+  records; export available throughout (PDPA s.10).
+- **Account deletion**: customer identity pseudonymised on past transactions, except
+  individual e-invoices issued in the customer's name (PDPA s.10; LHDN e-invoicing).
+  This replaces the earlier "name and phone stay attached for 7 years" position.
+- **Phone-number linking**: customer confirms which shop records are theirs before
+  linking (PDPA s.9).
+- **Surcharging**: confirmed allowed by CHIP; must be shown before payment.
+- **Bahasa Malaysia**: draft BM Privacy Notice added as
+  [`notis-privasi-pelanggan.md`](./notis-privasi-pelanggan.md) (PDPA s.7(3)). Its
+  language-precedence clause (§12) is left for counsel.
+- **Contracting party**: unchanged; a registered partnership may contract in its firm name.
+- **Added**: data-portability right; login-session storage disclosure.
+- **Force majeure**: not legally required; left to counsel.
+
 ## Next steps
 
 1. Send [`final.md`](./final.md) to a qualified Malaysian lawyer for formal review —
@@ -357,6 +437,9 @@ All open policy decisions were reviewed and locked in:
    - Yearly billing cycle & dedicated non-refundable checkbox in `meikigo-brand`.
 3. Implement automated settlement schedules (bi-daily/weekly/monthly + month-end sweep)
    in `meikigo-api` (`SettlementService.cs`).
-4. Once lawyer approved, wire the accepted version number into the actual signup/checkout
+4. Build the 2026-10-31 audit items before launch: self-serve switch to FREE in
+   `meikigo-brand`, first-send notice for merchant-declared consent, no-show policy
+   display and cap (when the penalty is built), and a customer breach-notification process.
+5. Once lawyer approved, wire the accepted version number into the actual signup/checkout
    flows (`meikigo-customer-webapp` registration, `meikigo-brand` subscription
    checkout).
