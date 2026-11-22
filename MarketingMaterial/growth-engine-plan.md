@@ -30,7 +30,7 @@ The market is small and listable (1,089 Selangor leads in the CRM), so **direct 
 
 ## Phase A — Build now (pre-payday, no contact)
 
-### A1. Score & segment the leads `[~]` — built, awaiting owner spot-check
+### A1. Score & segment the leads `[x]` — owner spot-check passed (20/20 ok)
 Result (2026-11-22): **A 199 · B 556 · C 334.** A = 145 busy independent barbershops + 45 chains + 9 switchers. Script: `barbershop-data/cleaned/score_leads.py` (weights at the top, re-run after tuning). Spot-check sheet: `barbershop-data/cleaned/spotcheck_20.md`.
 Known limit: booking-tool detection only looks at the `website` column; the raw scrape's `booking_link` isn't carried into `leads_import.csv`, so switchers may be undercounted.
 Script ranks all 1,089 leads by segment + priority with a one-line reason.
@@ -38,8 +38,8 @@ Script ranks all 1,089 leads by segment + priority with a one-line reason.
 - Output: `barbershop-data/cleaned/leads_scored.csv` + summary (counts per segment/priority, A-priority shops per area for walk-in routes).
 - **Verify:** owner spot-checks 20 shops on Google Maps and agrees with the ranking.
 
-### A2. CRM logging fields `[ ]`
-In `meikigo-crm-stack`: add custom fields `segment`, `priority`, `objection` (select), `lost_reason`. Import A1 scores.
+### A2. CRM logging fields `[x]`
+Done 2026-11-22 via `meikigo-crm-stack/seed/import_scores.py` (re-runnable). Added `segment`, `priority`, `score_reason`, `objection`; reused CRM's built-in `lead_score` and `lost_reason`/`lost_notes` (Lost Reason list: Pricing, Competition, Missing Features, No Decision-Maker, Poor Fit, …). New **Sales** section at top of the lead side panel. All 1,089 scraped leads scored; the 2 inbound WhatsApp leads are unscored.
 - Run `scripts/crm backup` first — live CRM holds real leads (never `down -v`).
 - Objection list (v1): price · already use Fresha/Setmore · no tablet · happy with paper · not decision-maker · not interested · other.
 - **Verify:** backup exists; a lead in the CRM UI shows segment + priority.
@@ -81,4 +81,5 @@ Ready so payday = calling, not writing.
 ## Log
 
 - 2026-11-22 — Plan agreed. Answers: sign-up paused (Supabase), CRM writes OK with backup, include salons (ranked lower), target set at 15 paying shops by 31 Jan 2027. Started A1.
-- 2026-11-22 — A1 scoring built: 199 A / 556 B / 334 C. Waiting on 20-shop spot-check before A2 (CRM import).
+- 2026-11-22 — A1 scoring built: 199 A / 556 B / 334 C. Spot-check 20/20 ok.
+- 2026-11-22 — A2 done: CRM backup 19:53 (Telegram), scores imported 1,089/1,089, Sales panel verified in the UI. Commits: meikigo-project 50c3b54, barbershop-data 2c8e947, meikigo-crm-stack 4c1e39f (none pushed).
