@@ -1,0 +1,22 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "http://localhost:3003",
+      "localStorage": [
+        {
+          "name": "meikigo.deviceId",
+          "value": "bd3403bc-a2aa-4501-ac67-7869581cde29"
+        },
+        {
+          "name": "meikigo.deviceLabel",
+          "value": "Front counter"
+        },
+        {
+          "name": "sb-127-auth-token",
+          "value": "{\"access_token\":\"eyJhbGciOiJFUzI1NiIsImtpZCI6ImI4MTI2OWYxLTIxZDgtNGYyZS1iNzE5LWMyMjQwYTg0MGQ5MCIsInR5cCI6IkpXVCJ9.eyJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc5NDY5MzAzN31dLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwiYXVkIjoiYXV0aGVudGljYXRlZCIsImVtYWlsIjoibmFkaWEtdGVzdEBnbWFpbC5jb20iLCJleHAiOjE3OTQ2OTY2MzcsImlhdCI6MTc5NDY5MzAzNywiaXNfYW5vbnltb3VzIjpmYWxzZSwiaXNzIjoiaHR0cDovLzEyNy4wLjAuMTo1NDMyMS9hdXRoL3YxIiwicGhvbmUiOiIiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiY2FzaGllciJdfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJzZXNzaW9uX2lkIjoiMTY4ZDU2ZmMtNzE4YS00OWYyLTk0YWItYWFmYjlkNmRkZTJkIiwic3ViIjoiMjFiYTM4YWYtNmViYS00ZmZjLTk3ZTAtZDhlOGJlZDRjYWM1IiwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZnVsbF9uYW1lIjoiTmFkaWEgUmFoaW0ifX0.C0n4OsWU2hZqEsqw5Q4pSSdN8CYpbjG_9Ay_Wx6FnonC_g-v2rlCO418boSWAgZDem92uU0Un7LpmfqNUPrg7A\",\"token_type\":\"bearer\",\"expires_in\":3600,\"expires_at\":1794696637,\"refresh_token\":\"qojippfmrgmv\",\"user\":{\"id\":\"21ba38af-6eba-4ffc-97e0-d8e8bed4cac5\",\"aud\":\"authenticated\",\"role\":\"authenticated\",\"email\":\"nadia-test@gmail.com\",\"email_confirmed_at\":\"2026-11-14T21:49:49.279275Z\",\"phone\":\"\",\"confirmed_at\":\"2026-11-14T21:49:49.279275Z\",\"last_sign_in_at\":\"2026-11-14T21:50:37.591143544Z\",\"app_metadata\":{\"provider\":\"email\",\"providers\":[\"email\"]},\"user_metadata\":{\"email_verified\":true,\"full_name\":\"Nadia Rahim\"},\"identities\":[{\"identity_id\":\"e91cb1c1-53ad-417f-aa6d-3f956659dfed\",\"id\":\"21ba38af-6eba-4ffc-97e0-d8e8bed4cac5\",\"user_id\":\"21ba38af-6eba-4ffc-97e0-d8e8bed4cac5\",\"identity_data\":{\"email\":\"nadia-test@gmail.com\",\"email_verified\":false,\"phone_verified\":false,\"sub\":\"21ba38af-6eba-4ffc-97e0-d8e8bed4cac5\"},\"provider\":\"email\",\"last_sign_in_at\":\"2026-11-14T21:49:49.277688Z\",\"created_at\":\"2026-11-14T21:49:49.277736Z\",\"updated_at\":\"2026-11-14T21:49:49.277736Z\",\"email\":\"nadia-test@gmail.com\"}],\"created_at\":\"2026-11-14T21:49:49.276547Z\",\"updated_at\":\"2026-11-14T21:50:37.59266Z\",\"is_anonymous\":false},\"weak_password\":null}"
+        }
+      ]
+    }
+  ]
+}

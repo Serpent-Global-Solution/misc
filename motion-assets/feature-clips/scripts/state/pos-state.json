@@ -1,0 +1,26 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "http://localhost:3003",
+      "localStorage": [
+        {
+          "name": "meikigo.deviceId",
+          "value": "c587821e-b616-4866-a160-43e6e1402791"
+        },
+        {
+          "name": "meikigo.deviceLabel",
+          "value": "Front counter"
+        },
+        {
+          "name": "sb-127-auth-token",
+          "value": "{\"access_token\":\"eyJhbGciOiJFUzI1NiIsImtpZCI6ImI4MTI2OWYxLTIxZDgtNGYyZS1iNzE5LWMyMjQwYTg0MGQ5MCIsInR5cCI6IkpXVCJ9.eyJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc5NDY2ODAyMn1dLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwiYXVkIjoiYXV0aGVudGljYXRlZCIsImVtYWlsIjoiZGVtby10ZXN0QGdtYWlsLmNvbSIsImV4cCI6MTc5NDY3MTYyMiwiaWF0IjoxNzk0NjY4MDIyLCJpc19hbm9ueW1vdXMiOmZhbHNlLCJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjU0MzIxL2F1dGgvdjEiLCJwaG9uZSI6IiIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJtZXJjaGFudC1hZG1pbiJdfSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJzZXNzaW9uX2lkIjoiNDhkYTgyMGMtNzk2OS00MDkyLWJjMDYtYzAzM2MyYTgyMzRhIiwic3ViIjoiYzVlYzRiODktNzc5MC00ODkwLTkyYjUtNWYwYmE5Y2EyYjFlIiwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZnVsbF9uYW1lIjoiSGFmaXogUmFobWFuIn19.oOZufU5cCL1IpEVizBsnQNrrc1XDpAEKRzf0AmRpErEbZrNC6lDIwLq66Ufj4RL0--xw1alSKSO7CQyZvPwlOw\",\"token_type\":\"bearer\",\"expires_in\":3600,\"expires_at\":1794671622,\"refresh_token\":\"h2znrhyd7n3j\",\"user\":{\"id\":\"c5ec4b89-7790-4890-92b5-5f0ba9ca2b1e\",\"aud\":\"authenticated\",\"role\":\"authenticated\",\"email\":\"demo-test@gmail.com\",\"email_confirmed_at\":\"2026-11-14T14:47:34.443903Z\",\"phone\":\"\",\"confirmed_at\":\"2026-11-14T14:47:34.443903Z\",\"last_sign_in_at\":\"2026-11-14T14:53:42.002581632Z\",\"app_metadata\":{\"provider\":\"email\",\"providers\":[\"email\"]},\"user_metadata\":{\"email_verified\":true,\"full_name\":\"Hafiz Rahman\"},\"identities\":[{\"identity_id\":\"c0b0a941-5629-4534-9d12-ffed2933a102\",\"id\":\"c5ec4b89-7790-4890-92b5-5f0ba9ca2b1e\",\"user_id\":\"c5ec4b89-7790-4890-92b5-5f0ba9ca2b1e\",\"identity_data\":{\"email\":\"demo-test@gmail.com\",\"email_verified\":false,\"phone_verified\":false,\"sub\":\"c5ec4b89-7790-4890-92b5-5f0ba9ca2b1e\"},\"provider\":\"email\",\"last_sign_in_at\":\"2026-11-14T14:47:34.440597Z\",\"created_at\":\"2026-11-14T14:47:34.440637Z\",\"updated_at\":\"2026-11-14T14:47:34.440637Z\",\"email\":\"demo-test@gmail.com\"}],\"created_at\":\"2026-11-14T14:47:34.436836Z\",\"updated_at\":\"2026-11-14T14:53:42.005183Z\",\"is_anonymous\":false},\"weak_password\":null}"
+        },
+        {
+          "name": "meikigo.openingFloat.e22e31cd-63fa-4964-9583-175e90c58940.2026-11-14",
+          "value": "15000"
+        }
+      ]
+    }
+  ]
+}

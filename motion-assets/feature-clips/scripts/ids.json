@@ -1,0 +1,29 @@
+{
+ "brand": "d5866693-5343-4569-a4a5-4d300f996da6",
+ "outlet": "e22e31cd-63fa-4964-9583-175e90c58940",
+ "products": {
+  "Haircut": "a98dfdf9-e357-4e41-beaf-a5f6e136370e",
+  "Haircut + Beard": "e6bcb1ff-28dc-4759-b12f-464a94a63e00",
+  "Kids Cut": "a5367dfe-f5c2-43a1-95c9-b08e24e8047f",
+  "Hair Wash": "7d7208f5-0c22-45fa-85ea-6364f73fa8e9"
+ },
+ "employees": {
+  "Faiz Hakimi": "d098799f-48b2-45de-9207-cfefa2fde16b",
+  "Daniel Lim": "49f7f40a-ad8b-4825-b138-546de89ab788",
+  "Arun Kumar": "c67e24e9-e8bf-43ae-9573-bbe433c714b5",
+  "Kamal Ariffin": "3d2669ed-2382-4702-9900-a5634d0ce8b7"
+ },
+ "retail": {
+  "Matte Clay Pomade": "02ca24ab-3094-4586-9cc4-bd7827d78f56",
+  "Beard Oil 30ml": "e9f08c6a-8d6a-4121-b88a-16a58f6e72d3",
+  "Daily Shampoo 250ml": "59f2af2f-4035-46c2-9353-bea34c5f66e2"
+ },
+ "clients": {
+  "Nurul Aisyah": "dd573695-9c72-445b-9343-e4d3aef6d32b",
+  "Tan Wei Ming": "11952f5c-bbf9-43db-9d06-3d8301a0c3dd",
+  "Muthu Raj": "5dcd50b6-49f1-415c-a890-50f3bc7d80c4",
+  "Hafizuddin Razak": "afeafddb-7ee3-4ee2-9c21-b040f871663f",
+  "Siti Khadijah": "cbb3d61e-4f30-48fe-bd30-7a1ea394bbb1"
+ },
+ "outlet2": "dcbb6c00-0de2-4e69-b1bd-7675dc3235b6"
+}
