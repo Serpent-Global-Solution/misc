@@ -1,6 +1,8 @@
 # Meikigo Sales Kit — Barbershops, Selangor
 
 For step A5 of `growth-engine-plan.md`. Use it from payday onward (sign-up and demos need Supabase back).
+
+**We are recruiting pilot (founding) shops first, paying customers second.** Every first contact is an invitation to apply as a founding shop, not a sales pitch. Paid plans come up only when the owner asks about price, or after the pilot.
 Every claim here comes from `meikigo-marketing-site/MESSAGING.md` and the site's pricing data. If you're not sure a feature exists, say "let me check" and don't promise it.
 
 ---
@@ -8,14 +10,16 @@ Every claim here comes from `meikigo-marketing-site/MESSAGING.md` and the site's
 ## 0. The rules
 
 1. **Log every touch in the CRM, the same day.** On the lead: change Status, fill **Objection** if they gave one, add a note with what they said, in their words. Those words feed the website copy and the weekly brief.
-2. **Use the tagged link for the channel you're on**, so the sign-up records where it came from:
+2. **Use the tagged link for the channel you're on.** It opens the founding-shops section, and the application records where it came from:
 
    | Channel | Link |
    |---|---|
-   | Walk-in visit | `meikigo.com/barbershop?ref=visit` |
-   | Phone call | `meikigo.com/barbershop?ref=call` |
-   | WhatsApp | `meikigo.com/barbershop?ref=wa` |
-   | Supply store | `meikigo.com/barbershop?ref=supplier` |
+   | Walk-in visit | `meikigo.com/barbershop?ref=visit#founding-shops` |
+   | Phone call | `meikigo.com/barbershop?ref=call#founding-shops` |
+   | WhatsApp | `meikigo.com/barbershop?ref=wa#founding-shops` |
+   | Supply store | `meikigo.com/barbershop?ref=supplier#founding-shops` |
+
+   Applications land in `meikigo-admin` → **Applications**. Set each one to Contacted / Accepted / Rejected there, and email the shop by hand. Nothing is sent automatically.
 
 3. **WhatsApp: 5–10 new chats a day maximum.** The number runs on an unofficial gateway and can be banned. Calls and visits have no limit, so lean on those.
 4. **Work the CRM by Priority A first, grouped by area.** `barbershop-data/cleaned/scoring_report.md` lists A shops per area, so you can plan a day of visits in one neighbourhood.
@@ -43,7 +47,22 @@ Every claim here comes from `meikigo-marketing-site/MESSAGING.md` and the site's
 
 Works on any iPhone, iPad or Android phone or tablet the shop already has.
 
-**Founding shops offer.** Use this as the "yes" that costs them nothing: shops apply on the site and, if picked, run on Plus free for 14 days. Plus stays free every month a shop they referred makes RM199+ in sales through Meikigo. We pick founding shops at our discretion.
+---
+
+## 1b. The pilot invite: lead with this in every first contact
+
+**What they get.** Use exactly what the website says, nothing more:
+- If picked, 14 days of every Plus feature. No card.
+- Plus stays free every month a shop they referred makes RM199 or more in sales through Meikigo.
+- We pick founding shops at our own discretion.
+
+**What we ask.** Honest feedback while they use it. The application form asks if they're willing.
+
+**What they do.** Apply at the tagged link: shop name, contact, area, number of chairs, walk-ins per day. About 2 minutes.
+
+> ⚠️ **Owner decision needed:** `requirements.md` says what an accepted founding shop gets is "not defined yet" beyond the website wording above. Before visits start, decide whether picked shops get anything more than the 14-day Plus trial plus the referral rule, e.g. a longer free period or help with setup. Until then, promise only the website wording.
+
+**Who to pick.** Shops that will actually use it every day and talk to us: busy enough to feel queue pain (the A list), an owner who is reachable, and willing to give feedback.
 
 ---
 
@@ -63,7 +82,7 @@ Openers are given in casual BM and English. Pick whichever the owner answers in.
 3. How long does closing take: cash count plus each barber's commission?
 
 **Show:** the queue screen, then a customer scanning the QR and joining from their phone, then the end-of-day report per barber.
-**Ask for:** "Try it free for 14 days. No card. I can set it up with you now, about 15 minutes." Or the founding shop application.
+**Ask for:** "We're picking a few founding barbershops around [area] to run it free and tell us what to fix. Want to apply? It takes 2 minutes." Fill in the application together on your phone using the `?ref=` link.
 
 ### B. Switcher: already on Fresha / Setmore (`switcher`, 26)
 **Their pain:** the booking app handles appointments, but walk-ins, the till and commissions are still separate. With Fresha's per-barber pricing, the bill grows with every hire.
@@ -79,14 +98,14 @@ Openers are given in casual BM and English. Pick whichever the owner answers in.
 1. What do you use for walk-ins and payment besides the booking app?
 2. How many barbers now, and planning to hire?
 
-**Ask for:** a trial run alongside the current app for 2 weeks. No need to switch on day one.
+**Ask for:** the founding-shop application, then run Meikigo alongside the current app during the pilot. No need to switch on day one.
 
 ### C. Small independent barbershop (`small_independent`, 378, mostly B priority)
 **Their pain:** smaller volume, more price-sensitive. Usually paper book plus WhatsApp.
 
 - **BM:** "Abang ambil booking macam mana sekarang, WhatsApp je ke? Pelanggan boleh scan QR terus booking, tak payah download app."
 
-**Lead with:** the flat RM109 price and the free trial, not analytics.
+**Lead with:** the founding-shop invite (free during the pilot). If they ask about price later, it's a flat RM109, not analytics.
 **Watch for:** "too expensive" (see objections). A 1-chair shop may honestly not need us yet. Log `Price` or `Happy with paper` and move on politely.
 
 ### D. Chain / multiple branches (`chain`, 103)
@@ -100,7 +119,7 @@ Openers are given in casual BM and English. Pick whichever the owner answers in.
 - Starter covers 4 outlets, Plus 8, Pro 20.
 - Pro is the one with the HQ dashboard and payroll.
 
-**Ask for:** a founder call or demo, not a quick sign-up. Chains are bigger deals and slower.
+**Ask for:** a founder call or demo, then invite one branch as a founding shop. Chains are bigger deals and slower.
 
 ### E. Salon (`salon`, 409, B/C priority)
 The product and copy are built for barbershops. Only pitch salons that run **walk-ins plus chairs plus commission** the way a barbershop does. Skip spa, nail and beauty-treatment-heavy places. Lowest priority. Don't spend visit days on them.
@@ -133,9 +152,9 @@ The product and copy are built for barbershops. Only pitch salons that run **wal
 
 ## 4. Phone call (2 minutes)
 
-> "Hi, is this [shop name]? I'm [name] from Meikigo. We make a system for barbershops in Malaysia. One tablet for walk-in queue, booking and payment. I'm not selling right now. Can I ask one quick question? How do you handle walk-ins and bookings on a busy day?"
+> "Hi, is this [shop name]? I'm [name] from Meikigo. We make a system for barbershops in Malaysia. One tablet for walk-in queue, booking and payment. We're choosing a few founding barbershops in [area] to use it free and tell us what to improve. Can I ask one quick question? How do you handle walk-ins and bookings on a busy day?"
 
-- **Interested:** offer a visit or send the `?ref=call` link on WhatsApp.
+- **Interested:** offer a visit, or send the `?ref=call#founding-shops` link on WhatsApp so they can apply.
 - **Not now:** "No problem. Can I WhatsApp you a link to look at later?" Log it.
 - **No:** thank them, log `Not interested`, and don't call again.
 
@@ -145,8 +164,8 @@ The product and copy are built for barbershops. Only pitch salons that run **wal
 
 Personal, one at a time, never a blast. Say who you are and how to opt out.
 
-- **BM:** "Salam/Hi bang, saya [nama] dari Meikigo. Kami buat sistem untuk kedai gunting: satu tablet untuk queue walk-in, booking (pelanggan scan QR, tak payah app) dan bayaran tunai/DuitNow/kad. Kalau berminat boleh tengok sini: meikigo.com/barbershop?ref=wa. Kalau tak berminat, balas 'stop', saya tak ganggu lagi 🙏"
-- **EN:** "Hi, I'm [name] from Meikigo. We make a system for barbershops: one tablet for walk-in queue, booking (customers scan a QR, no app) and cash/DuitNow/card payment. Have a look if useful: meikigo.com/barbershop?ref=wa. If not interested, reply 'stop' and I won't message again."
+- **BM:** "Salam/Hi bang, saya [nama] dari Meikigo. Kami tengah pilih beberapa kedai gunting di [kawasan] jadi *founding shop*, guna sistem kami percuma dan bagi feedback. Sistem ni satu tablet untuk queue walk-in, booking (pelanggan scan QR, tak payah app) dan bayaran tunai/DuitNow/kad. Kalau berminat, mohon sini (2 minit): meikigo.com/barbershop?ref=wa#founding-shops. Kalau tak berminat, balas 'stop', saya tak ganggu lagi 🙏"
+- **EN:** "Hi, I'm [name] from Meikigo. We're choosing a few barbershops in [area] as founding shops, to use our system free and give us feedback. It's one tablet for walk-in queue, booking (customers scan a QR, no app) and cash/DuitNow/card payment. If you're interested, apply here (2 minutes): meikigo.com/barbershop?ref=wa#founding-shops. If not, reply 'stop' and I won't message again."
 
 **Follow-up:** one only, after 3–4 days, if there's no reply. Then stop.
 
@@ -156,6 +175,7 @@ Personal, one at a time, never a blast. Say who you are and how to opt out.
 
 | They say | Say (honestly) | CRM Objection |
 |---|---|---|
+| "Apa catch dia? / What's the catch?" | No catch. We need real shops using it daily and telling us what's wrong. You give feedback, you get the system free during the pilot. Promise only the website wording on what happens after. | Other (note it) |
 | "Mahal / too expensive" | Flat RM109 for the whole shop, not per barber. Ask how much time closing takes each night. If they're 1–2 barbers on a per-staff app, admit that may be cheaper. Offer the 14-day trial. | Price |
 | "Dah guna Fresha / Setmore" | "Does it run walk-ins and the till too?" Offer to run Meikigo alongside for 2 weeks. Use the 3-barber maths only if it's true for them. | Already use Fresha/Setmore |
 | "Takde tablet" | Any phone or tablet works, including an old Android. No card terminal needed. | No tablet |
@@ -172,10 +192,10 @@ If they don't sign up at the end, also set **Lost Reason** (Pricing, Competition
 ## 7. Barber supply stores (~95, in `barbershop-data/barbersupplier/`)
 
 **Why:** they visit and talk to many shops every week.
-**Pitch:** "Your customers are barbershops. We help them run walk-ins, booking and payment on one tablet. Can we leave cards at your counter, or could you mention us to shops that ask?"
-**Link:** `meikigo.com/barbershop?ref=supplier`
+**Pitch:** "Your customers are barbershops. We're choosing founding barbershops to use our system free during our pilot. Could we leave cards at your counter, or could you mention it to shops that ask?"
+**Link:** `meikigo.com/barbershop?ref=supplier#founding-shops`
 
-> ⚠️ **Owner decision needed before this pitch:** what do we offer the store in return? A referral fee, a discount for their customers, or nothing? There's no partner programme today, so don't promise one until it's decided.
+> ⚠️ **Owner decision needed:** the pilot's referral reward is shop-to-shop only (a shop keeps Plus free when a shop it referred makes RM199+). There's nothing for a supply store. Decide whether stores get anything in return; until then, ask only for the favour.
 
 ---
 

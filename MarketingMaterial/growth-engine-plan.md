@@ -5,10 +5,11 @@ Status legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 
 ## Goal
 
-**Paying barbershops still active at day 60** — not leads, not traffic.
+**Pilot first, then paying.** Meikigo recruits founding (pilot) shops before selling paid plans. Updated 2026-11-22.
 
-- **Target:** 15 paying shops by **31 Jan 2027**, each re-checked at day 60.
-- **Pass/fail judge:** paying-shop records in Meikigo's own billing data, with sign-up source attached. Not the quality of any brief, not opinion. Report the real number even if we miss.
+- **Stage 1 target (pilot):** **10 founding shops actively using Meikigo by 31 Jan 2027.** "Active" = real queue/checkout transactions in at least 3 of the last 4 weeks, read from Meikigo's own database. An accepted application that never transacts doesn't count.
+- **Stage 2 target (paying):** set once the pilot shows what shops do after it. Paying shops still active at day 60.
+- **Pass/fail judge:** Meikigo's own records (applications, transactions, billing), with the source attached. Not the quality of any brief, not opinion. Report the real number even if we miss.
 
 ## Constraints
 
@@ -53,7 +54,8 @@ Marketing site captures `?utm_source` / `?ref` → passes to sign-up → meikigo
 - Tags: `ref=wa` · `ref=call` · `ref=visit` · `ref=supplier` · `ref=blog` · `ref=ai`.
 - **Verify:** unit/integration test + local sign-up stores the source. `[!]` End-to-end on hosted Supabase waits for payday.
 
-### A4. Free search measurement `[!]` — waiting on Haziq for the GoDaddy (DNS) account
+### A4. Free search measurement + GA4 `[ ]` — not blocked: verify by HTML tag, no GoDaddy needed
+Owner creates a Search Console **URL-prefix** property for `https://meikigo.com/` (HTML tag method) and a GA4 property, then sends the verification tag + GA4 Measurement ID. Claude adds both, swaps `track()` from Vercel to GA4 (existing Start free/sign-up events keep working), updates the privacy notice line (PDPA disclosure), deploys via Netlify CLI. The DNS-based Domain property can be added later when GoDaddy access returns.
 Google Search Console + Bing Webmaster verification on meikigo.com, submit `sitemap.xml`, deploy via Netlify CLI.
 - Owner does the account/verify clicks in their own Google account.
 - **Verify:** both consoles show the site verified and the sitemap read.
@@ -86,6 +88,6 @@ Ready so payday = calling, not writing.
 
 - 2026-11-22 — Plan agreed. Answers: sign-up paused (Supabase), CRM writes OK with backup, include salons (ranked lower), target set at 15 paying shops by 31 Jan 2027. Started A1.
 - 2026-11-22 — A1 scoring built: 199 A / 556 B / 334 C. Spot-check 20/20 ok.
-- 2026-11-22 — A5 sales kit drafted. A4 blocked on GoDaddy access (Haziq).
+- 2026-11-22 — A5 sales kit drafted, then rewritten pilot-first (founding-shop invite in every first contact). Goal changed to Stage 1 pilot target. A4 unblocked (HTML-tag verification).
 - 2026-11-22 — A3 code done (api 7fd943e, site 9e3774f). Found: (1) meikigo.com/barbershop images load from the paused Supabase project and are broken; (2) Vercel Analytics script 404s on Netlify, so existing site events aren't recorded; (3) 0b74c85 shipped `Outlet.RequireDiscountApproval` without a migration (now covered idempotently in AddSignupSource); (4) 5 API tests already fail on HEAD.
 - 2026-11-22 — A2 done: CRM backup 19:53 (Telegram), scores imported 1,089/1,089, Sales panel verified in the UI. Commits: meikigo-project 50c3b54, barbershop-data 2c8e947, meikigo-crm-stack 4c1e39f (none pushed).
