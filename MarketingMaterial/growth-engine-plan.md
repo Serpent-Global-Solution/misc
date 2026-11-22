@@ -34,7 +34,7 @@ The market is small and listable (1,089 Selangor leads in the CRM), so **direct 
 - [ ] **Haziq: deploy.** Either order is safe (the API ignores fields it doesn't know; new fields are optional).
   - meikigo-marketing-site (Netlify CLI): image fallback `2b05a0c` (fixes live broken photos), sign-up source `9e3774f`, founding form `2ff857e` + dropdown fix `1076fcb`, GA4 `05009b9`.
   - meikigo-api: `7fd943e` (sign-up source + missing outlets column), `814e3a4` (pilot-screening fields). Two migrations run on startup; needs Supabase back.
-  - meikigo-admin: `b69207a` (shop profile + source on Applications).
+  - meikigo-admin: `87c99c5` (shop profile + source on Applications).
 - [ ] **Authorize Jira** (Atlassian sign-in link), so the growth-engine ticket and the SCRUM-58 comment can be created.
 - [ ] **Find the 8 missing homepage photos:** Barbershop-Happy, Dinner-Table, Happy-Retail, 80s-Funk, Randomized Groceries Edit, People Preparing Food, Preparing Food Different Workers, Randomized Products Image (and Stressed-Barber). Or download them from Supabase after payday.
 - [x] **GA4 wired in** (`G-7DQBRXH3HD`, site commit after `2ff857e`); privacy notice + legal docs updated. Goes live with Haziq's deploy. GA admin settings done (14-month retention, Haziq added).
@@ -118,7 +118,7 @@ Ready so payday = calling, not writing.
 - 2026-11-22 — Plan agreed. Answers: sign-up paused (Supabase), CRM writes OK with backup, include salons (ranked lower), target set at 15 paying shops by 31 Jan 2027. Started A1.
 - 2026-11-22 — A1 scoring built: 199 A / 556 B / 334 C. Spot-check 20/20 ok.
 - 2026-11-22 — Pilot candidates: 293 pass the data pre-screen (barbershop-data 47bb608), CRM fields Pilot Track/Rank + public view "Pilot candidates" (crm-stack 4deb38c, backup 22:58). Chain detection by brand name moved chains 103 → 221. Criteria + wave plan in sales kit §1b.
-- 2026-11-22 — Founding form extended for pilot selection (api 814e3a4, site 2ff857e, admin b69207a): role, outlets, current system, payment mix, device; WhatsApp required; feedback commitment spelled out. Admin view not visually checked (needs API + login).
+- 2026-11-22 — Founding form extended for pilot selection (api 814e3a4, site 2ff857e, admin 87c99c5): role, outlets, current system, payment mix, device; WhatsApp required; feedback commitment spelled out. Admin view not visually checked (needs API + login).
 - 2026-11-22 — A5 sales kit drafted, then rewritten pilot-first (founding-shop invite in every first contact). Goal changed to Stage 1 pilot target. A4 unblocked (HTML-tag verification).
 - 2026-11-22 — A3 code done (api 7fd943e, site 9e3774f). Found: (1) meikigo.com/barbershop images load from the paused Supabase project and are broken; (2) Vercel Analytics script 404s on Netlify, so existing site events aren't recorded; (3) 0b74c85 shipped `Outlet.RequireDiscountApproval` without a migration (now covered idempotently in AddSignupSource); (4) 5 API tests already fail on HEAD.
 - 2026-11-22 — A2 done: CRM backup 19:53 (Telegram), scores imported 1,089/1,089, Sales panel verified in the UI. Commits: meikigo-project 50c3b54, barbershop-data 2c8e947, meikigo-crm-stack 4c1e39f (none pushed).
