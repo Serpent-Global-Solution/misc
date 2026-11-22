@@ -29,6 +29,30 @@ The market is small and listable (1,089 Selangor leads in the CRM), so **direct 
 - `barbershop-data/barbersupplier/`: 1,607 rows, mostly barbershops in other states (~1,017). Only ~95 are real barber supply stores → supplier channel is small.
 - No sign-up source attribution in meikigo-api. No Search Console / analytics on meikigo.com (only `robots.txt`, `sitemap.xml`).
 
+## Reminders (owner)
+
+- [ ] **Deploy meikigo-marketing-site** (Netlify CLI). Ships the image fallback (`2b05a0c`) and the sign-up source capture (`9e3774f`). Fixes the live site's broken photos.
+- [ ] **Authorize Jira** (Atlassian sign-in link), so the growth-engine ticket and the SCRUM-58 comment can be created.
+- [ ] **Find the 8 missing homepage photos:** Barbershop-Happy, Dinner-Table, Happy-Retail, 80s-Funk, Randomized Groceries Edit, People Preparing Food, Preparing Food Different Workers, Randomized Products Image (and Stressed-Barber). Or download them from Supabase after payday.
+- [ ] **Google account** for GA4 + Search Console (sign-up was stuck on verification).
+- [ ] **Payday:** pay Supabase → test sign-up source end to end → set up the demo shop for walk-in visits.
+- [ ] **Decide:** what supply stores get in return for referring shops (sales kit §7).
+
+## To reconfirm with Haziq
+
+1. **Missing migration.** Commit `0b74c85` added `outlets.require_discount_approval` with no migration. Did he add the column by hand on the shared DB, or run an uncommitted migration? Has `0b74c85` been deployed? (The new `AddSignupSource` migration adds it with `IF NOT EXISTS`, so it's safe either way.)
+2. **Supabase projects.** Which is production: `wviiswdlplbzdoeibzvu` (marketing images) or `nekeahobppbrosrctppv` (apps' `.env.example`)? Same paid account?
+3. **5 API tests already failing on main.** ClientServiceTests.RegisterAsync_CreatesRealSupabaseUser…, PlanCapsAndDisputeStaffEndpointTests.UpdatingPlanCapsCanClearMaxLoginsWithSentinel, SupportAndPiiAccessTests (2), QueuePostgresTests.SelfServiceBooking_WithAnOffset_IsStoredAsUtc. Known?
+4. **GoDaddy access** for the Search Console Domain property (DNS).
+5. **"Free for life" for pilot shops.** Must be defined in writing before telling pilots, because a vague "free" offer can count as misleading under the Consumer Protection Act 1999:
+   - **Which plan:** Plus?
+   - **Per shop or per outlet:** if they open a second outlet, is that free too?
+   - **What still costs money:** the CHIP processing fee on DuitNow and card always applies; add-ons probably do too.
+   - **How a shop keeps it:** e.g. stays active and keeps giving feedback during the pilot.
+   - **What ends it:** e.g. inactive for X months, or the account is closed.
+
+   Suggested wording: "Founding shops keep Plus free for as long as the shop stays active on Meikigo. Payment processing fees still apply." The website's founding section and `requirements.md` (Brand Referral Pilot: PlusFree re-earned monthly) must be updated to match.
+
 ## Phase A — Build now (pre-payday, no contact)
 
 ### A1. Score & segment the leads `[x]` — owner spot-check passed (20/20 ok)
