@@ -44,7 +44,11 @@ Done 2026-11-22 via `meikigo-crm-stack/seed/import_scores.py` (re-runnable). Add
 - Objection list (v1): price · already use Fresha/Setmore · no tablet · happy with paper · not decision-maker · not interested · other.
 - **Verify:** backup exists; a lead in the CRM UI shows segment + priority.
 
-### A3. Sign-up source attribution `[ ]`
+### A3. Sign-up source attribution `[x]` (code) · `[!]` production test waits for payday
+Done 2026-11-22. meikigo-api `7fd943e`: optional `source` on register + founding application → `user_accounts.signup_source` / `founding_shop_applications.source` (migration `AddSignupSource`); bad values become null, never block a sign-up. Marketing site `9e3774f`: remembers `?ref=`/`?utm_source=` (else first external referrer host, e.g. `google.com`, `chatgpt.com`) and sends it with both forms.
+Checked: 5 new API tests pass; migration applies / rolls back / re-applies on a throwaway Postgres; in the browser, landing on `/blog?ref=visit` → moving to `/barbershop` → sign-up sent `"source":"visit"`.
+**To read results later:** `select signup_source, count(*) from user_accounts group by 1;` (same for `founding_shop_applications.source`).
+**Deploy order:** either order is safe (the API ignores unknown fields). Not deployed yet.
 Marketing site captures `?utm_source` / `?ref` → passes to sign-up → meikigo-api stores it on the shop record (migration).
 - Tags: `ref=wa` · `ref=call` · `ref=visit` · `ref=supplier` · `ref=blog` · `ref=ai`.
 - **Verify:** unit/integration test + local sign-up stores the source. `[!]` End-to-end on hosted Supabase waits for payday.
@@ -82,4 +86,5 @@ Ready so payday = calling, not writing.
 
 - 2026-11-22 — Plan agreed. Answers: sign-up paused (Supabase), CRM writes OK with backup, include salons (ranked lower), target set at 15 paying shops by 31 Jan 2027. Started A1.
 - 2026-11-22 — A1 scoring built: 199 A / 556 B / 334 C. Spot-check 20/20 ok.
+- 2026-11-22 — A3 code done (api 7fd943e, site 9e3774f). Found: (1) meikigo.com/barbershop images load from the paused Supabase project and are broken; (2) Vercel Analytics script 404s on Netlify, so existing site events aren't recorded; (3) 0b74c85 shipped `Outlet.RequireDiscountApproval` without a migration (now covered idempotently in AddSignupSource); (4) 5 API tests already fail on HEAD.
 - 2026-11-22 — A2 done: CRM backup 19:53 (Telegram), scores imported 1,089/1,089, Sales panel verified in the UI. Commits: meikigo-project 50c3b54, barbershop-data 2c8e947, meikigo-crm-stack 4c1e39f (none pushed).
