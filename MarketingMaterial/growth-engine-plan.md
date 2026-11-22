@@ -53,12 +53,12 @@ Marketing site captures `?utm_source` / `?ref` → passes to sign-up → meikigo
 - Tags: `ref=wa` · `ref=call` · `ref=visit` · `ref=supplier` · `ref=blog` · `ref=ai`.
 - **Verify:** unit/integration test + local sign-up stores the source. `[!]` End-to-end on hosted Supabase waits for payday.
 
-### A4. Free search measurement `[ ]`
+### A4. Free search measurement `[!]` — waiting on Haziq for the GoDaddy (DNS) account
 Google Search Console + Bing Webmaster verification on meikigo.com, submit `sitemap.xml`, deploy via Netlify CLI.
 - Owner does the account/verify clicks in their own Google account.
 - **Verify:** both consoles show the site verified and the sitemap read.
 
-### A5. Sales kit `[ ]`
+### A5. Sales kit `[~]` — drafted in `MarketingMaterial/sales-kit.md`, awaiting owner read. Open item: what supply stores get in return (§7)
 Ready so payday = calling, not writing.
 - Short script per top segment (busy independent / switcher / small shop / chain / salon).
 - Walk-in demo checklist (tablet, QR booking flow, payment flow).
@@ -86,5 +86,6 @@ Ready so payday = calling, not writing.
 
 - 2026-11-22 — Plan agreed. Answers: sign-up paused (Supabase), CRM writes OK with backup, include salons (ranked lower), target set at 15 paying shops by 31 Jan 2027. Started A1.
 - 2026-11-22 — A1 scoring built: 199 A / 556 B / 334 C. Spot-check 20/20 ok.
+- 2026-11-22 — A5 sales kit drafted. A4 blocked on GoDaddy access (Haziq).
 - 2026-11-22 — A3 code done (api 7fd943e, site 9e3774f). Found: (1) meikigo.com/barbershop images load from the paused Supabase project and are broken; (2) Vercel Analytics script 404s on Netlify, so existing site events aren't recorded; (3) 0b74c85 shipped `Outlet.RequireDiscountApproval` without a migration (now covered idempotently in AddSignupSource); (4) 5 API tests already fail on HEAD.
 - 2026-11-22 — A2 done: CRM backup 19:53 (Telegram), scores imported 1,089/1,089, Sales panel verified in the UI. Commits: meikigo-project 50c3b54, barbershop-data 2c8e947, meikigo-crm-stack 4c1e39f (none pushed).
