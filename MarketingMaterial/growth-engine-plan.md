@@ -37,7 +37,9 @@ The market is small and listable (1,089 Selangor leads in the CRM), so **direct 
   - meikigo-admin: `b69207a` (shop profile + source on Applications).
 - [ ] **Authorize Jira** (Atlassian sign-in link), so the growth-engine ticket and the SCRUM-58 comment can be created.
 - [ ] **Find the 8 missing homepage photos:** Barbershop-Happy, Dinner-Table, Happy-Retail, 80s-Funk, Randomized Groceries Edit, People Preparing Food, Preparing Food Different Workers, Randomized Products Image (and Stressed-Barber). Or download them from Supabase after payday.
-- [~] **GA4:** Google account created, property being set up. Next: send Measurement ID (`G-…`) → Claude wires it in and updates the privacy notice. Set data retention to 14 months; add Haziq as admin. Search Console can then verify via the GA4 tag.
+- [x] **GA4 wired in** (`G-7DQBRXH3HD`, site commit after `2ff857e`); privacy notice + legal docs updated. Goes live with Haziq's deploy. Owner: set data retention to 14 months; add Haziq as admin.
+- [ ] **After deploy:** Search Console → add URL-prefix property `https://meikigo.com/` → verify with the "Google Analytics" method → submit `sitemap.xml`.
+- [ ] **Lawyer check:** the US-transfer basis for Google Analytics (Google's data processing terms), alongside the existing Singapore one.
 - [ ] **Payday:** pay Supabase → test sign-up source end to end → set up the demo shop for walk-in visits.
 - [ ] **Decide:** what supply stores get in return for referring shops (sales kit §7).
 

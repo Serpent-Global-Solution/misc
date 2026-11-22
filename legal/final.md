@@ -145,9 +145,9 @@ We use a small number of reputable technology providers to help run Meikigo. Eac
 * **Supabase (Database and logins):** Our core database and authentication servers are hosted with Supabase in **Singapore**.
 * **CHIP (Payment processing):** CHIP processes all card and DuitNow QR payments at shop counters. Meikigo never sees, collects, or stores your credit or debit card numbers.
 * **Brevo (Email service):** Delivers verification codes, booking reminders, receipts, and approved marketing emails. Brevo processes your name and email address on servers in the **European Union**.
-* **Vercel Analytics:** Measures visits to our public marketing website only. It is completely cookieless and does not track personal customer data.
+* **Google Analytics:** Measures which pages and links on our public marketing website lead to sign-ups and founding-shop applications (marketing website only, not the app). It sets cookies and collects device and usage information (pages viewed, referring website, approximate location, browser type). Google processes this on our behalf, possibly outside Malaysia including the **United States**, under its data processing terms. We do not use it for advertising, and you can block its cookies in your browser settings.
 
-**Overseas transfers (PDPA Section 129):** Your data is transferred outside Malaysia to Singapore (Supabase) and the European Union (Brevo). We rely on the fact that both places have data protection laws substantially similar to Malaysia's (Singapore's PDPA 2012 and the EU's GDPR), backed by binding contracts with each provider requiring protection at least equal to Malaysian law. Your consent at signup is an additional basis.
+**Overseas transfers (PDPA Section 129):** Your data is transferred outside Malaysia to Singapore (Supabase) and the European Union (Brevo). We rely on the fact that both places have data protection laws substantially similar to Malaysia's (Singapore's PDPA 2012 and the EU's GDPR), backed by binding contracts with each provider requiring protection at least equal to Malaysian law. Your consent at signup is an additional basis. Marketing-website analytics data is processed by Google, including in the United States, under Google's binding data processing terms.
 
 We do not sell, rent, or trade your personal data to any third party.
 

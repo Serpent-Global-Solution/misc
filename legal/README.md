@@ -154,7 +154,11 @@ despite real infrastructure vendors processing personal data. New **Section 5
 processing, consistent with the merchant-terms disclosure), **Brevo** (transactional +
 marketing email — confirmed in `deployment-doc.md`/`launch-readiness-audit.md`), and
 **Vercel Analytics** (marketing site only, cookieless, confirmed in
-`meikigo-marketing-site/src/lib/analytics.ts`). All later sections renumbered (old
+`meikigo-marketing-site/src/lib/analytics.ts`). *Update 2026-11-22: Vercel Analytics
+never worked on Netlify hosting and was replaced by **Google Analytics 4** (uses
+cookies; data processed by Google, including in the US). All notices updated; the
+US-transfer basis (Google's data processing terms) needs the same lawyer check as the
+Singapore one.* All later sections renumbered (old
 §5–§9 are now §7–§11).
 
 **Cross-border transfer disclosed as a fact** (Supabase is in Singapore, not Malaysia),

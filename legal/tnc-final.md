@@ -144,7 +144,7 @@ We use a small number of reputable technology providers to help run Meikigo. Eac
   * *Legal basis for overseas storage (PDPA Section 129):* We transfer and store data in Singapore based on: (1) your explicit consent when registering and booking through the platform, and (2) binding contracts and strict technical safeguards with Supabase that ensure your personal data is protected to standards at least as high as Malaysian privacy law.
 * **CHIP (Payment processing):** CHIP processes all card and DuitNow QR payments at shop counters. Meikigo never sees, collects, or stores your credit or debit card numbers.
 * **Brevo (Email service):** Delivers verification codes, booking reminders, receipts, and approved marketing emails.
-* **Vercel Analytics:** Measures visits to our public marketing website only. It is completely cookieless and does not track personal customer data.
+* **Google Analytics:** Measures which pages and links on our public marketing website lead to sign-ups and founding-shop applications (marketing website only, not the app). It sets cookies and collects device and usage information (pages viewed, referring website, approximate location, browser type). Google processes this on our behalf, possibly outside Malaysia including the **United States**, under its data processing terms. We do not use it for advertising, and you can block its cookies in your browser settings.
 
 We do not sell, rent, or trade your personal data to any third party.
 
