@@ -32,12 +32,12 @@ The market is small and listable (1,089 Selangor leads in the CRM), so **direct 
 ## Reminders (owner)
 
 - [ ] **Haziq: deploy.** Either order is safe (the API ignores fields it doesn't know; new fields are optional).
-  - meikigo-marketing-site (Netlify CLI): image fallback `2b05a0c` (fixes live broken photos), sign-up source `9e3774f`, founding form `2ff857e`.
+  - meikigo-marketing-site (Netlify CLI): image fallback `2b05a0c` (fixes live broken photos), sign-up source `9e3774f`, founding form `2ff857e` + dropdown fix `1076fcb`, GA4 `05009b9`.
   - meikigo-api: `7fd943e` (sign-up source + missing outlets column), `814e3a4` (pilot-screening fields). Two migrations run on startup; needs Supabase back.
   - meikigo-admin: `b69207a` (shop profile + source on Applications).
 - [ ] **Authorize Jira** (Atlassian sign-in link), so the growth-engine ticket and the SCRUM-58 comment can be created.
 - [ ] **Find the 8 missing homepage photos:** Barbershop-Happy, Dinner-Table, Happy-Retail, 80s-Funk, Randomized Groceries Edit, People Preparing Food, Preparing Food Different Workers, Randomized Products Image (and Stressed-Barber). Or download them from Supabase after payday.
-- [x] **GA4 wired in** (`G-7DQBRXH3HD`, site commit after `2ff857e`); privacy notice + legal docs updated. Goes live with Haziq's deploy. Owner: set data retention to 14 months; add Haziq as admin.
+- [x] **GA4 wired in** (`G-7DQBRXH3HD`, site commit after `2ff857e`); privacy notice + legal docs updated. Goes live with Haziq's deploy. GA admin settings done (14-month retention, Haziq added).
 - [ ] **After deploy:** Search Console → add URL-prefix property `https://meikigo.com/` → verify with the "Google Analytics" method → submit `sitemap.xml`.
 - [ ] **Lawyer check:** the US-transfer basis for Google Analytics (Google's data processing terms), alongside the existing Singapore one.
 - [ ] **Payday:** pay Supabase → test sign-up source end to end → set up the demo shop for walk-in visits.
