@@ -117,6 +117,7 @@ Ready so payday = calling, not writing.
 
 - 2026-11-22 — Plan agreed. Answers: sign-up paused (Supabase), CRM writes OK with backup, include salons (ranked lower), target set at 15 paying shops by 31 Jan 2027. Started A1.
 - 2026-11-22 — A1 scoring built: 199 A / 556 B / 334 C. Spot-check 20/20 ok.
+- 2026-11-22 — Pilot candidates: 293 pass the data pre-screen (barbershop-data 47bb608), CRM fields Pilot Track/Rank + public view "Pilot candidates" (crm-stack 4deb38c, backup 22:58). Chain detection by brand name moved chains 103 → 221. Criteria + wave plan in sales kit §1b.
 - 2026-11-22 — Founding form extended for pilot selection (api 814e3a4, site 2ff857e, admin b69207a): role, outlets, current system, payment mix, device; WhatsApp required; feedback commitment spelled out. Admin view not visually checked (needs API + login).
 - 2026-11-22 — A5 sales kit drafted, then rewritten pilot-first (founding-shop invite in every first contact). Goal changed to Stage 1 pilot target. A4 unblocked (HTML-tag verification).
 - 2026-11-22 — A3 code done (api 7fd943e, site 9e3774f). Found: (1) meikigo.com/barbershop images load from the paused Supabase project and are broken; (2) Vercel Analytics script 404s on Netlify, so existing site events aren't recorded; (3) 0b74c85 shipped `Outlet.RequireDiscountApproval` without a migration (now covered idempotently in AddSignupSource); (4) 5 API tests already fail on HEAD.

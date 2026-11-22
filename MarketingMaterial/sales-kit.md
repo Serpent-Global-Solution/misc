@@ -62,7 +62,43 @@ Works on any iPhone, iPad or Android phone or tablet the shop already has.
 
 > ⚠️ **Owner decision needed:** `requirements.md` says what an accepted founding shop gets is "not defined yet" beyond the website wording above. Before visits start, decide whether picked shops get anything more than the 14-day Plus trial plus the referral rule, e.g. a longer free period or help with setup. Until then, promise only the website wording.
 
-**Who to pick.** Shops that will actually use it every day and talk to us: busy enough to feel queue pain (the A list), an owner who is reachable, and willing to give feedback.
+**Who to pick.** Shops that will actually use it every day and talk to us. Start from the CRM view **Pilot candidates**: 293 shops that pass the data checks, ranked within each district and track. Rank 1 in every group comes first.
+
+**How many: 10 shops, in two waves.**
+
+| District | Pilots |
+|---|---|
+| Petaling | 3 |
+| Hulu Langat | 3 |
+| Klang | 2 |
+| Gombak | 2 |
+
+- **Wave 1: 4 shops (one per district) for 2 weeks.** Fix what they find before adding more.
+- **Wave 2: the other 6.**
+
+**Must-haves (check on the visit and in the application):**
+1. The owner works in the shop most days and decides. Form: *Your role = Owner, here most days.*
+2. Real daily volume: about 15+ customers a day. Data proxy: 100+ Google reviews. Form: *walk-ins per day.*
+3. Agrees to the feedback deal: the WhatsApp group with our team, a 10-minute call each week, and transactions in 3 of every 4 weeks. Form: the feedback checkbox.
+4. A working phone or tablet and internet at the counter. Form: *Device at your counter.*
+5. Within about 30–40 minutes of the team, so someone can be there the same day something breaks.
+
+**Mix across the 10:**
+
+| Track (CRM *Pilot Track*) | How many | What they test |
+|---|---|---|
+| busy (independent, 100+ reviews) | 5 | queue under load, commission per barber, end-of-day reports |
+| switcher (on Fresha/Setmore) | 1–2 | booking flow vs a known app, switching pain |
+| small (30–99 reviews) | 1–2 | setup simplicity, price sensitivity |
+| chain (one branch) | 1 | multiple outlets, owner/HQ view |
+
+Also aim for at least 3 shops where many customers pay by DuitNow or card (form: *How customers mostly pay*), to exercise the CHIP flow.
+
+**Disqualify:** rating under 3.5 (already filtered out), the owner is rarely there, "just want it free" with no feedback commitment, or under about 10 customers a day.
+
+**Replace rule:** no transactions for 2 weeks → one check-in call → still inactive, they're out, and the next shop on the list from the same district is offered the spot.
+
+**Data limits:** the review count is a proxy for footfall, not a measurement. Chains are detected by repeated brand names, so check the odd one on the visit.
 
 ---
 
